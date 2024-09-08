@@ -6,27 +6,28 @@ import ZoomImage from "../islands/ZoomImage.tsx";
 import FormProductPage from "site/islands/FormProductPage.tsx";
 import Image from "apps/website/components/Image.tsx";
 import type { PropertiesList } from "../loaders/propertiesData.ts";
+import type { SectionProps } from "deco/types.ts";
 
 export interface Props {
   propertiesList?: PropertiesList;
 }
 
-const HeroProductPage = ({ propertiesList = [] }:Props) => {
-  const property = propertiesList
+const HeroProductPage = ({url, properties}: SectionProps<typeof loader>) => {
+  
+  const currentSlug = url?.split("/")[2];
+  const property = properties.filter
 
-  console.log(property[0])
+  console.log(property)
+  console.log(currentSlug)
 
   const id = useId();
-  const images = ["https://dlajgvw9htjpb.cloudfront.net/cms/b26ab618-2b1e-4a17-8868-498b96b52dc0/H6309829/17012948286529502.jpg",
-    "https://dlajgvw9htjpb.cloudfront.net/cms/b26ab618-2b1e-4a17-8868-498b96b52dc0/H6309829/-393672028532225682.jpg",
-    "https://dlajgvw9htjpb.cloudfront.net/cms/b26ab618-2b1e-4a17-8868-498b96b52dc0/H6309829/-393672028532225682.jpg"  ];
 
   return (
     <div className="container mt-28 mx-auto px-4 py-16 lg:px-0">
       <div id={id} className="flex justify-center space-x-4 lg:px-[5%]">
  
         <GalleryProductPage
-                images={property[3].images}
+                images={property[3]?.images}
               />
         
         {/* Form */}
@@ -37,14 +38,14 @@ const HeroProductPage = ({ propertiesList = [] }:Props) => {
 
       {/* Product Details */}
       <div className="container mt-8 lg:px-[5%]">
-        <h2 className="text-[32px] font-extrabold text-privia-passion">{property[0].title}</h2>
-        <p className="text-2xl mt-2 text-[#787878] font-extrabold">{property[0].price}</p>
+        <h2 className="text-[32px] font-extrabold text-privia-passion">{property[0]?.title}</h2>
+        <p className="text-2xl mt-2 text-[#787878] font-extrabold">{property[0]?.price}</p>
       </div>
       <div className="container flex flex-col md:flex-rowgap-4 w-full mt-4 lg:px-[5%]">
         <ul className="flex flex-row gap-4 text-xs text-[#787878]">
-          <li>{property[0].rooms} BEDROOMS</li>
-          <li>&bull; {property[0].bathrooms} FULL BATHS</li>
-          <li>&bull; {property[0].areaSize} Ft</li>
+          <li>{property[0]?.rooms} BEDROOMS</li>
+          <li>&bull; {property[0]?.bathrooms} FULL BATHS</li>
+          <li>&bull; {property[0]?.areaSize} Ft</li>
         </ul>
       <div className="md:hidden block mt-9">
           <FormProductPage />
@@ -53,7 +54,6 @@ const HeroProductPage = ({ propertiesList = [] }:Props) => {
     </div>
   );
 };
-
 
 function GalleryProductPage({ images }: { images: string[] }) {
   const id = useId();
@@ -141,5 +141,17 @@ function Buttons() {
     </>
   );
 }
+
+export const loader = async (req: Request, { propertiesList = [] }:Props) => {
+
+  const url = req.url
+  console.log("loader", url)
+  const properties = propertiesList
+  console.log("loader", properties)
+  return {
+    url: url,
+    properties: properties
+  };
+};
 
 export default HeroProductPage;

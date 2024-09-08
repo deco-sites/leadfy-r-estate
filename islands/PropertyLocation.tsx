@@ -9,10 +9,8 @@ import type { PropertiesList } from "../loaders/propertiesData.ts";
 const PropertyLocation = (  { propertiesList = [] }:Props) => {
 
   const property = propertiesList
-  console.log(property)
   const lat: string = property[0]?.mapLocation?.lat || "0"
   const lng: string = property[0]?.mapLocation?.lng || "0"
-  console.log(lat, lng)
 
   useEffect(() => {
     // Carregar Leaflet CSS
