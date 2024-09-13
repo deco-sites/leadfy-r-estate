@@ -13,8 +13,6 @@ const PropertyOverview = ({ propertiesList = [] }: Props) => {
     }
   })
 
-  console.log(property)
-
   return (
     <div class="container mx-auto px-4 flex flex-col gap-[5%] lg:px-[5%] lg:flex-row">
       <div>

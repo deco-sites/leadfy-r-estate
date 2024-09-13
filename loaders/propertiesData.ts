@@ -25,7 +25,7 @@ export default async function propertiesData(
     const posts = obj.data.post
     
     const propertiesResult: string[] = posts.map((post: any) => {
-        console.log(post);
+        
         return (
             {
                 areaSize: post?.area_size?._text,
