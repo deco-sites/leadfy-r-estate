@@ -5,9 +5,11 @@ import type { PropertiesList } from "../loaders/propertiesData.ts";
 
 export interface Props {
   property: PropertiesList;
+  showPriceText?: boolean;
+  priceText?: string;
 }
 
-export default function ShelfCard({ property }: Props) {
+export default function ShelfCard({ showPriceText, priceText, property }: Props) {
   return (
     <a href={property?.url} class="w-full flex flex-col gap-4 bg-zinc-100 rounded-md">
       <div class="w-full">
@@ -21,7 +23,12 @@ export default function ShelfCard({ property }: Props) {
       </div>
       <div class="w-full flex flex-col gap-2 mx-3 pb-4">
         <p class="font-semibold">{property?.title}</p>
-        <span class="text-privia-passion font-semibold">{property?.price}</span>
+        <div class="flex flex-col">
+          {showPriceText && (
+            <span class="w-[150px] text-xs">{priceText}</span>
+          )}
+          <span class="text-privia-passion font-semibold">{property?.price}</span>
+        </div>
         <div class="w-full flex gap-4">
           {/* <div class="flex gap-1">
             <Icon id="Car" size={27} strokeWidth={0.1} />

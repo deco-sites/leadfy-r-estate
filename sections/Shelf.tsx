@@ -7,9 +7,11 @@ import ShelfCard from "../components/ui/ShelfCard.tsx";
 export interface Props {
   propertiesList?: PropertiesList;
   defaultOrder?: string;
+  showPriceText?: boolean;
+  priceText?: string;
 }
 
-export default function Shelf({ defaultOrder = "default",propertiesList=[]}: Props) {
+export default function Shelf({ priceText, showPriceText, defaultOrder = "default",propertiesList=[]}: Props) {
  
   return (
     <div class="w-full px-4 mt-10 flex flex-col justify-start items-center gap-5 lg:w-4/5 lg:mx-auto">
@@ -21,7 +23,7 @@ export default function Shelf({ defaultOrder = "default",propertiesList=[]}: Pro
         {
           propertiesList.map(property => {
             return(
-              <ShelfCard property={property} />
+              <ShelfCard priceText={priceText} showPriceText={showPriceText} property={property} />
             )
           })
         }

@@ -1,6 +1,6 @@
 {
   "name": "Properties",
-  "path": "/properties",
+  "path": "/",
   "sections": [
     {
       "__resolveType": "HeaderReal"
@@ -22,6 +22,14 @@
       }
     },
     {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/TitleSection.tsx",
+        "title": "Property",
+        "description": "<p><span style=\"font-size: 14pt;\" data-mce-style=\"font-size: 14pt;\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</span></p>"
+      }
+    },
+    {
       "__resolveType": "site/sections/Shelf.tsx",
       "propertiesList": {
         "__resolveType": "site/loaders/propertiesData.ts"
@@ -36,7 +44,9 @@
           "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11997/d60342a9-305b-4f8a-bfe0-f765a8dc0e8f",
           "alt": "lorem"
         }
-      }
+      },
+      "showPriceText": true,
+      "priceText": "Starts at"
     },
     {
       "__resolveType": "Footer"

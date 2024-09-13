@@ -9,7 +9,9 @@
       "__resolveType": "site/sections/HeroProductPage.tsx",
       "propertiesList": {
         "__resolveType": "site/loaders/propertiesData.ts"
-      }
+      },
+      "showPriceText": true,
+      "priceText": "Starts at"
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
