@@ -106,7 +106,7 @@ export default function Footer({
   ],
 }: Props) {
   return (
-    <div class="mx-auto md:px-[5%] px-4 pt-10 mt-6 text-sm bg-privia-pure">
+    <div class="mx-auto md:px-[5%] px-4 pt-10 mt-6 text-sm bg-privia-prestige">
       <div class="flex flex-col gap-20">
         <div class="flex flex-col gap-6 md:gap-48 lg:flex-row">
           <div class="flex flex-col">
@@ -120,7 +120,7 @@ export default function Footer({
               />
             </div>
             <div class="lg:w-[60%]">
-              <h4 class="font-semibold text-2xl mb-4">{subscribe?.title}</h4>
+              <h4 class="font-semibold text-white text-2xl mb-4">{subscribe?.title}</h4>
               <form class="flex flex-col">
                 <p
                   class="text-base mb-4 text-[#6D737A] font-normal"
@@ -196,7 +196,7 @@ export default function Footer({
           <div class="flex gap-9">
             {links?.map((link) => (
               <div>
-                <h4 class="font-semibold text-2xl mb-8">{link.title}</h4>
+                <h4 class="font-semibold text-2xl mb-8 text-white">{link.title}</h4>
                 <div class="flex flex-col gap-4">
                   {link.items?.map((item) => (
                     <a
@@ -211,7 +211,7 @@ export default function Footer({
             ))}
           </div>
         </div>
-        <div class="border-primary border-t flex flex-col gap-4 items-center justify-between lg:flex-row lg:items-center py-8">
+        {/* <div class="border-primary border-t flex flex-col gap-4 items-center justify-between lg:flex-row lg:items-center py-8">
           <div class="flex flex-col gap-4 items-center lg:flex-row lg:gap-6">
             <a
               href={madeWith?.href}
@@ -236,7 +236,7 @@ export default function Footer({
             </div>
           </div>
 
-        </div>
+        </div> */}
       </div>
     </div>
   );
