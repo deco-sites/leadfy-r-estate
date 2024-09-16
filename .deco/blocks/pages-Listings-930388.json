@@ -8,11 +8,11 @@
     {
       "__resolveType": "site/sections/BannerCategory.tsx",
       "image": {
-        "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11997/2bcb2f39-2a31-4c6f-a425-5ea1659f735f",
+        "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/399e731a-9bb7-4334-8f02-858288780044/Frame-1533210136.png",
         "alt": "Privia"
       },
       "imageMobile": {
-        "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11997/5335248d-89f6-4f99-910f-6145cf86856c",
+        "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/2b0ebe33-ed99-42fe-a216-2501ba730fae/Frame-1533210137.png",
         "alt": "Privia Mobile"
       },
       "content": {
@@ -25,8 +25,8 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/TitleSection.tsx",
-        "title": "Property",
-        "description": "<p><span style=\"font-size: 14pt;\" data-mce-style=\"font-size: 14pt;\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</span></p>"
+        "title": "Thrive With Privia",
+        "description": "<p><span style=\"font-size: 14pt;\" data-mce-style=\"font-size: 14pt;\">Luxury Concierge Services for Living and Investing in Florida Real Estate</span></p>"
       }
     },
     {
