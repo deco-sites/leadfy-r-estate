@@ -18,16 +18,15 @@
     },
     {
       "__resolveType": "site/sections/AboutUsBody.tsx",
-      "storyTitle": "Our Story",
-      "storyContent": "<p>The world didn’t need another real estate brokerage. It needed something different. Something more. It needed something with the imagination and insight to upend a broken model. A structure that empowers instead of extinguishes the unique potential in each of us. A collection of like minds that understand the potential of technology and building lasting connections. A Brokerage 3.0 that makes no apologies for making the old guard uncomfortable.<br><br><span class=\"NormalTextRun SCXW114139476 BCX0\">As a company born in the chaos of a global&nbsp;</span><span class=\"NormalTextRun SCXW114139476 BCX0\">pandemic, where others saw stumbling blocks, we saw&nbsp;</span><span class=\"NormalTextRun SCXW114139476 BCX0\">stepping stones</span><span class=\"NormalTextRun SCXW114139476 BCX0\">. Built on the success of being the #1 ranked sales team in New York City, SERHANT. is the first Brokerage 3.0 of its kind.</span><br><br>Empowering our agents, clients, partners, and staff with novel media, technology, and educational tools:<br><br>SERHANT. Studios:&nbsp;<span class=\"NormalTextRun SCXW40179093 BCX0\">Award-winning f</span><span class=\"NormalTextRun SCXW40179093 BCX0\">ilm-quality content and media production.</span><br><br>SERHANT. ID Lab:&nbsp;<span class=\"NormalTextRun SCXW40179093 BCX0\">World class&nbsp;</span><span class=\"NormalTextRun SCXW40179093 BCX0\">branding and marketing services.</span><br><br>We know that potential is in everything and everyone. But to spot what’s hidden in plain sight, latent, or undiscovered—in a person, property, or even an entire industry—we need to look at the world differently. And seizing that potential takes something more. At SERHANT., we rely on creativity, camaraderie, grit, and optimism. We have a healthy disregard for the status quo, and, above all, we are relentless in the pursuit of what’s possible.<br></p>",
+      "storyContent": "<p>At Privia, we redefine luxury real estate by offering more than just properties; we provide a comprehensive concierge service designed to turn dreams of living and investing in Florida into reality. Our mission is to seamlessly connect international investors, primarily from Brazil, with exclusive opportunities to invest in the U.S. real estate market, while also offering personalized guidance through every step of the journey.</p><p>With a sophisticated, consultative approach, we ensure that our clients receive expert support in immigration, accounting, legal matters, and real estate acquisition. Privia is about more than just transactions—it’s about securing your future, elevating your lifestyle, and offering peace of mind during high-value investments. We understand that luxury is about trust, security, and a personalized experience that transcends borders.</p><p>Our team is dedicated to making the American dream accessible, offering not only investment opportunities but also an entry into an elevated way of life, whether for personal use or to build a prosperous legacy. At Privia, you’re not just buying real estate—you’re investing in a vision of the future, with a trusted partner by your side.</p>",
       "values": [
         {
-          "title": "Our Values",
-          "content": "<p><span id=\"_mce_caret\" data-mce-bogus=\"1\" data-mce-type=\"format-caret\"><span style=\"font-size: 14pt;\" data-mce-style=\"font-size: 14pt;\">﻿We support each other at our low points and never let our high points go to our heads. If one of us is behind, we are all behind. And when one of us succeeds, we ALL do.</span></span><br data-mce-bogus=\"1\"></p>",
+          "title": "Excellence",
+          "content": "<p>We pride ourselves on offering an elevated concierge experience that goes beyond traditional real estate services. Our consultative approach ensures personalized attention to each client, making their journey seamless, secure, and stress-free.</p>",
           "icon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11997/af6ee1c4-a7ad-4aed-949f-c29d63cfec11"
         },
         {
-          "title": "Our Values",
+          "title": "Trust",
           "content": "<p><span id=\"_mce_caret\" data-mce-bogus=\"1\" data-mce-type=\"format-caret\"><span style=\"font-size: 14pt;\" data-mce-style=\"font-size: 14pt;\">﻿We support each other at our low points and never let our high points go to our heads. If one of us is behind, we are all behind. And when one of us succeeds, we ALL do.</span></span><br data-mce-bogus=\"1\"></p>",
           "icon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11997/af6ee1c4-a7ad-4aed-949f-c29d63cfec11"
         },
@@ -42,9 +41,10 @@
           "icon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11997/af6ee1c4-a7ad-4aed-949f-c29d63cfec11"
         }
       ],
-      "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/30027850-2788-4195-b4ec-01af7f2454fe/IMG_0984-(1).PNG",
-      "ceoTitle": "Our Founder & CEO",
-      "ceoContent": "<p><span style=\"color: rgb(156, 163, 175); font-size: 12pt;\" data-mce-style=\"color: rgb(156, 163, 175); font-size: 12pt;\">Ryan Matthew Serhant is one of the most successful and well-known real estate brokers in the world with over $10B in lifetime sales. After spending a decade leading one of New York City’s top-ranked — and most disruptive — real estate teams to over $4B in sales, he founded SERHANT., a brokerage driving success through innovative content, technology, and amplification. In addition to his work in real estate, Ryan is an entrepreneur, producer, public speaker, bestselling author, and star of multiple BRAVO TV shows as well as the top-rated Netflix series Owning Manhattan, focused on SERHANT. and released in June of 2024.</span></p>"
+      "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/c739e439-a4fa-4b37-acc0-bb74cd852304/IMG_0933.PNG",
+      "ceoContent": "<p>Joceli Fernandez is a leading expert in the luxury sector, specializing in concierge services tailored to clients looking to live and invest in Florida real estate. As the visionary CEO and Founder of Privia, Joceli has redefined luxury living by providing a seamless, high-end experience for discerning clients. With a deep understanding of the nuances of the luxury market and a commitment to exceptional service, she guides her clients through every aspect of their investment journey, offering personalized insights and the keys to success in one of the world's most sought-after real estate markets.</p>",
+      "storyTitle": "#LivePrivia",
+      "ceoTitle": "Our Founder & CEO"
     },
     {
       "__resolveType": "Footer"
