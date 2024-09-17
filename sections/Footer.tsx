@@ -211,7 +211,7 @@ export default function Footer({
             ))}
           </div>
         </div>
-        {/* <div class="border-primary border-t flex flex-col gap-4 items-center justify-between lg:flex-row lg:items-center py-8">
+        <div class="border-primary border-t flex flex-col gap-4 items-center justify-between lg:flex-row lg:items-center py-8">
           <div class="flex flex-col gap-4 items-center lg:flex-row lg:gap-6">
             <a
               href={madeWith?.href}
@@ -236,7 +236,7 @@ export default function Footer({
             </div>
           </div>
 
-        </div> */}
+        </div>
       </div>
     </div>
   );
