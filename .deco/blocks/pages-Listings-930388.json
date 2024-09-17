@@ -50,6 +50,13 @@
     },
     {
       "__resolveType": "Footer"
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "website/sections/Seo/Seo.tsx",
+        "title": "Privia"
+      }
     }
   ],
   "seo": {

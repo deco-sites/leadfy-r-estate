@@ -15,11 +15,17 @@ const PropertyDescription = ({ propertiesList = [] }: Props) => {
     }
   })
 
+  const extractTextFromHtml = (htmlString: string) => {
+    const regex = /<p>(.*?)<\/p>/;
+    const match = htmlString?.match(regex);
+    return match ? match[1] : '';
+  };
+
   return (
     <div class="container mx-auto px-4 pb-8 lg:px-[5%]">
         <h3 class="text-[26px] font-extrabold text-[#ff3f3f] mb-8">Property Description</h3>
         <p class={`text-base text-black ${showFullDescription.value ? 'line-clamp-none' : 'line-clamp-3'}`}>
-          {property[0]?.description}
+          {extractTextFromHtml(property[0]?.description)}
         </p>
         {/* <button
               class="flex items-center text-[#ff3f3f] mt-4"

@@ -42,11 +42,15 @@ const HeroProductPage = ({propertiesList = []}: Props) => {
         <p className="text-2xl mt-2 text-[#787878] font-extrabold">{property[0]?.price}</p>
       </div>
       <div className="container flex flex-col md:flex-rowgap-4 w-full mt-4 lg:px-[5%]">
-        <ul className="flex flex-row gap-4 text-xs text-[#787878]">
+        <ul className="flex flex-row items-center gap-4 text-xs text-[#787878]">
           <li>{property[0]?.rooms} BEDROOMS</li>
           <li>&bull; {property[0]?.bathrooms} FULL BATHS</li>
           <li>&bull; {property[0]?.areaSize} Ft</li>
-          <li>&bull; {property[0]?.label}</li>
+          { property[0]?.label && (
+            <li className="bg-privia-prestige text-privia-passion py-1 px-2 rounded">{property[0]?.label}</li>
+
+          )
+          }
         </ul>
       <div className="md:hidden block mt-9">
           <FormProductPage />
@@ -85,9 +89,9 @@ function GalleryProductPage({ images }: { images: string[] }) {
         ))}
       </Slider>
 
-      {/* {images?.length! > 1 ? <Buttons /> : null} */}
+      {images?.length! > 1 ? <Buttons /> : null}
 
-      <Dots images={images} />
+      {/* <Dots images={images} /> */}
 
       <SliderJS rootId={id} infinite />
     </div>

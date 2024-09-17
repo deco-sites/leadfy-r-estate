@@ -23,7 +23,7 @@ const FormProductPage = () => {
                         className="w-full p-3 border border-gray-300 rounded h-24"
                     ></textarea>
 
-                    <div className="flex items-start">
+                    <div className="flex items-end">
                         <input type="checkbox" className="mt-1 mr-2" />
                         <p className="text-xs text-gray-600">
                             lorem ipsum dolor sit amet consectur
@@ -34,7 +34,7 @@ const FormProductPage = () => {
                         type="submit"
                         className="w-full bg-[#ff3f3f] text-white hover:bg-[#9d3636] px-8 py-3"
                     >
-                        Submit
+                        Get in Touch
                     </button>
                 </div>
             </form>
