@@ -23,10 +23,9 @@ export default async function propertiesData(
         compact: true,
     });    
     const posts = obj.data.post
-
-    console.log(posts[0])
     
-    const propertiesResult: string[] = posts.map(post => {
+    const propertiesResult: string[] = posts.map((post: any) => {
+        
         return (
             {
                 areaSize: post?.area_size?._text,
@@ -36,18 +35,21 @@ export default async function propertiesData(
                 id: post?.ID?._text,
                 images: post?.ImageURL?._text?.split('|'),
                 imageFeatured: post?.ImageFeatured?._text,
+                label: post?.Label?._text,
                 location: post?.Location?._text,
                 mapLocation: {
                     lat: post?.lat?._text,
                     lng: post?.lng?._text,
                 },
                 postModifiedDate: post?.PostModifiedDate?._text, 
-                price: formatPrice(Number(post?.price?._text))                ,
+                price: formatPrice(Number(post?.price?._text)),
                 rooms: post?.rooms?._text,
                 slug: post?.Slug?._text,
+                status: post?.Status?.map((status: any) => {return status._text}),
                 title: post?.Title?._text,
                 type: post?.Type?._text,                
                 url: `/properties/${post?.Slug?._text}`,
+                yearBuilt: post?.year_built?._text
             }
         )
     })

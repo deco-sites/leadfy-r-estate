@@ -14,9 +14,12 @@
       "priceText": "Starts at"
     },
     {
-      "__resolveType": "site/sections/PropertyDescription.tsx",
-      "propertiesList": {
-        "__resolveType": "site/loaders/propertiesData.ts"
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/PropertyDescription.tsx",
+        "propertiesList": {
+          "__resolveType": "site/loaders/propertiesData.ts"
+        }
       }
     },
     {
