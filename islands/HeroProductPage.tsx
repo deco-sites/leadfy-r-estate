@@ -80,7 +80,6 @@ function GalleryProductPage({ images }: { images: string[] }) {
             <ZoomImage>
               <img
                 class="w-full h-max"
-                style={{aspectRatio}}
                 src={image}
                 width={650}
                 />

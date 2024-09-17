@@ -23,12 +23,12 @@ const FormProductPage = () => {
                         className="w-full p-3 border border-gray-300 rounded h-24"
                     ></textarea>
 
-                    <div className="flex items-end">
+                    {/* <div className="flex items-end">
                         <input type="checkbox" className="mt-1 mr-2" />
                         <p className="text-xs text-gray-600">
                             lorem ipsum dolor sit amet consectur
                         </p>
-                    </div>
+                    </div> */}
 
                     <button
                         type="submit"
