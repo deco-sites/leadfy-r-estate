@@ -3,15 +3,18 @@
   "path": "/about-us",
   "sections": [
     {
-      "__resolveType": "header-real"
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "HeaderReal"
+      }
     },
     {
       "__resolveType": "site/sections/BannerAboutUs.tsx",
-      "banner": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11997/2bcb2f39-2a31-4c6f-a425-5ea1659f735f",
+      "banner": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/33807118-8827-451d-a54e-86b7bdafceb6/Frame-1533210136.png",
+      "mobileBanner": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/71cae0c6-6d7e-4ded-ab0a-066a600e3139/Frame-1533210137.png",
       "title": "About Us",
-      "ctaLabel": "Join Us",
-      "ctaUrl": "#",
-      "mobileBanner": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11997/2bcb2f39-2a31-4c6f-a425-5ea1659f735f"
+      "ctaLabel": "FOLLOW US",
+      "ctaUrl": "https://www.instagram.com/jofernandezusa/"
     },
     {
       "__resolveType": "site/sections/AboutUsBody.tsx",
@@ -39,10 +42,9 @@
           "icon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11997/af6ee1c4-a7ad-4aed-949f-c29d63cfec11"
         }
       ],
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11997/95ed5e2b-f055-4d50-bd0a-0ed6aaf205af",
+      "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/30027850-2788-4195-b4ec-01af7f2454fe/IMG_0984-(1).PNG",
       "ceoTitle": "Our Founder & CEO",
-      "ceoContent": "<p><span style=\"color: rgb(156, 163, 175); font-size: 12pt;\" data-mce-style=\"color: rgb(156, 163, 175); font-size: 12pt;\">Ryan Matthew Serhant is one of the most successful and well-known real estate brokers in the world with over $10B in lifetime sales. After spending a decade leading one of New York City’s top-ranked — and most disruptive — real estate teams to over $4B in sales, he founded SERHANT., a brokerage driving success through innovative content, technology, and amplification. In addition to his work in real estate, Ryan is an entrepreneur, producer, public speaker, bestselling author, and star of multiple BRAVO TV shows as well as the top-rated Netflix series Owning Manhattan, focused on SERHANT. and released in June of 2024.</span></p>",
-      "ourValuesTitle": "Our Values"
+      "ceoContent": "<p><span style=\"color: rgb(156, 163, 175); font-size: 12pt;\" data-mce-style=\"color: rgb(156, 163, 175); font-size: 12pt;\">Ryan Matthew Serhant is one of the most successful and well-known real estate brokers in the world with over $10B in lifetime sales. After spending a decade leading one of New York City’s top-ranked — and most disruptive — real estate teams to over $4B in sales, he founded SERHANT., a brokerage driving success through innovative content, technology, and amplification. In addition to his work in real estate, Ryan is an entrepreneur, producer, public speaker, bestselling author, and star of multiple BRAVO TV shows as well as the top-rated Netflix series Owning Manhattan, focused on SERHANT. and released in June of 2024.</span></p>"
     },
     {
       "__resolveType": "Footer"
