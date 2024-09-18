@@ -48,7 +48,7 @@ export default async function propertiesData(
                 status: post?.Status?.map((status: any) => {return status._text}),
                 title: post?.Title?._text,
                 type: post?.Type?._text,                
-                url: `/properties/${post?.Slug?._text}`,
+                url: `/properties/${post?.Slug?._text}/${post?.ID?._text}`,
                 yearBuilt: post?.year_built?._text
             }
         )

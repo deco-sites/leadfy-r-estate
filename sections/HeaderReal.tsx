@@ -13,13 +13,17 @@ export type MenuNavItem = {
 }
 
 export interface PropsHeaderReal {
+    email: string;
+    facebook: string;
+    instagram: string;
+    phone: string;
     imagem?: ImageWidget;
     logo?: ImageWidget;
     secondLogo?: ImageWidget;
     menuItems?: MenuNavItem[];
 }
 
-const HeaderReal = ({ imagem, logo, secondLogo, menuItems }: PropsHeaderReal) => {
+const HeaderReal = ({ email, facebook, instagram, phone, imagem, logo, secondLogo, menuItems }: PropsHeaderReal) => {
     return (
         <div className="flex flex-col w-full absolute top-0 z-10">
             <div className="bg-privia-passion py-2 hidden lg:px-5 lg:flex">
@@ -31,17 +35,18 @@ const HeaderReal = ({ imagem, logo, secondLogo, menuItems }: PropsHeaderReal) =>
                             width={28}
                             height={28}
                         />
-                        <p className="text-white text-sm"><span className="font-bold">Email us at : </span>example@mail.com</p>
+                        <p className="text-white text-sm"><span className="font-bold">Email us at : </span>{email}</p>
                     </div>
                     <div className="flex items-center space-x-4">
-                        <Icon class="text-white" size={18} id="Facebook" strokeWidth={2} />
-                        <Icon class="text-white" size={18} id="Facebook" strokeWidth={2} />
-                        <Icon class="text-white" size={18} id="Facebook" strokeWidth={2} />
-                        <Icon class="text-white" size={18} id="Instagram" strokeWidth={2} />
-                        <Icon class="text-white" size={18} id="Instagram" strokeWidth={2} />
+                        {facebook && (
+                            <a href={facebook}><Icon class="text-white" size={18} id="Facebook" strokeWidth={2} /></a>
+                        )}
+                        {instagram && (
+                            <a href={instagram}><Icon class="text-white" size={18} id="Instagram" strokeWidth={2} /></a>
+                        )}
                         <div className="flex items-center border-l-2 px-2 border-white gap-2">
                             <Icon class="text-white" size={18} id="Phone" strokeWidth={2} />
-                            <p className="text-white text-sm font-Inter gap-2">123-4567 890</p>
+                            <p className="text-white text-sm font-Inter gap-2">{phone}</p>
                         </div>
                     </div>
                 </div>
