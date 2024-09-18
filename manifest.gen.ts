@@ -13,24 +13,25 @@ import * as $$$$$$4 from "./sections/BlogPosts.tsx";
 import * as $$$$$$5 from "./sections/Faq.tsx";
 import * as $$$$$$6 from "./sections/FeaturedProperty.tsx";
 import * as $$$$$$7 from "./sections/Footer.tsx";
-import * as $$$$$$8 from "./sections/Header.tsx";
-import * as $$$$$$9 from "./sections/HeaderReal.tsx";
-import * as $$$$$$23 from "./sections/hero-1.tsx";
-import * as $$$$$$24 from "./sections/hero-2.tsx";
-import * as $$$$$$10 from "./sections/Hero.tsx";
-import * as $$$$$$25 from "./sections/hero2.tsx";
-import * as $$$$$$11 from "./sections/HeroBanner.tsx";
-import * as $$$$$$12 from "./sections/HeroProductPage.tsx";
-import * as $$$$$$13 from "./sections/ImageWithParagraph.tsx";
-import * as $$$$$$14 from "./sections/Logos.tsx";
-import * as $$$$$$15 from "./sections/PropertyBuyOption.tsx";
-import * as $$$$$$16 from "./sections/PropertyDescription.tsx";
-import * as $$$$$$17 from "./sections/PropertyLocation.tsx";
-import * as $$$$$$18 from "./sections/PropertyOverview.tsx";
-import * as $$$$$$19 from "./sections/Shelf.tsx";
-import * as $$$$$$20 from "./sections/Testimonials.tsx";
-import * as $$$$$$21 from "./sections/Theme/Theme.tsx";
-import * as $$$$$$22 from "./sections/TitleSection.tsx";
+import * as $$$$$$8 from "./sections/GlobalTags.tsx";
+import * as $$$$$$9 from "./sections/Header.tsx";
+import * as $$$$$$10 from "./sections/HeaderReal.tsx";
+import * as $$$$$$24 from "./sections/hero-1.tsx";
+import * as $$$$$$25 from "./sections/hero-2.tsx";
+import * as $$$$$$11 from "./sections/Hero.tsx";
+import * as $$$$$$26 from "./sections/hero2.tsx";
+import * as $$$$$$12 from "./sections/HeroBanner.tsx";
+import * as $$$$$$13 from "./sections/HeroProductPage.tsx";
+import * as $$$$$$14 from "./sections/ImageWithParagraph.tsx";
+import * as $$$$$$15 from "./sections/Logos.tsx";
+import * as $$$$$$16 from "./sections/PropertyBuyOption.tsx";
+import * as $$$$$$17 from "./sections/PropertyDescription.tsx";
+import * as $$$$$$18 from "./sections/PropertyLocation.tsx";
+import * as $$$$$$19 from "./sections/PropertyOverview.tsx";
+import * as $$$$$$20 from "./sections/Shelf.tsx";
+import * as $$$$$$21 from "./sections/Testimonials.tsx";
+import * as $$$$$$22 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$23 from "./sections/TitleSection.tsx";
 
 const manifest = {
   "loaders": {
@@ -45,24 +46,25 @@ const manifest = {
     "site/sections/Faq.tsx": $$$$$$5,
     "site/sections/FeaturedProperty.tsx": $$$$$$6,
     "site/sections/Footer.tsx": $$$$$$7,
-    "site/sections/Header.tsx": $$$$$$8,
-    "site/sections/HeaderReal.tsx": $$$$$$9,
-    "site/sections/hero-1.tsx": $$$$$$23,
-    "site/sections/hero-2.tsx": $$$$$$24,
-    "site/sections/Hero.tsx": $$$$$$10,
-    "site/sections/hero2.tsx": $$$$$$25,
-    "site/sections/HeroBanner.tsx": $$$$$$11,
-    "site/sections/HeroProductPage.tsx": $$$$$$12,
-    "site/sections/ImageWithParagraph.tsx": $$$$$$13,
-    "site/sections/Logos.tsx": $$$$$$14,
-    "site/sections/PropertyBuyOption.tsx": $$$$$$15,
-    "site/sections/PropertyDescription.tsx": $$$$$$16,
-    "site/sections/PropertyLocation.tsx": $$$$$$17,
-    "site/sections/PropertyOverview.tsx": $$$$$$18,
-    "site/sections/Shelf.tsx": $$$$$$19,
-    "site/sections/Testimonials.tsx": $$$$$$20,
-    "site/sections/Theme/Theme.tsx": $$$$$$21,
-    "site/sections/TitleSection.tsx": $$$$$$22,
+    "site/sections/GlobalTags.tsx": $$$$$$8,
+    "site/sections/Header.tsx": $$$$$$9,
+    "site/sections/HeaderReal.tsx": $$$$$$10,
+    "site/sections/hero-1.tsx": $$$$$$24,
+    "site/sections/hero-2.tsx": $$$$$$25,
+    "site/sections/Hero.tsx": $$$$$$11,
+    "site/sections/hero2.tsx": $$$$$$26,
+    "site/sections/HeroBanner.tsx": $$$$$$12,
+    "site/sections/HeroProductPage.tsx": $$$$$$13,
+    "site/sections/ImageWithParagraph.tsx": $$$$$$14,
+    "site/sections/Logos.tsx": $$$$$$15,
+    "site/sections/PropertyBuyOption.tsx": $$$$$$16,
+    "site/sections/PropertyDescription.tsx": $$$$$$17,
+    "site/sections/PropertyLocation.tsx": $$$$$$18,
+    "site/sections/PropertyOverview.tsx": $$$$$$19,
+    "site/sections/Shelf.tsx": $$$$$$20,
+    "site/sections/Testimonials.tsx": $$$$$$21,
+    "site/sections/Theme/Theme.tsx": $$$$$$22,
+    "site/sections/TitleSection.tsx": $$$$$$23,
   },
   "apps": {
     "site/apps/decohub.ts": $$$$$$$$$$$0,

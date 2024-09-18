@@ -8,10 +8,12 @@ import Image from "apps/website/components/Image.tsx";
 import type { PropertiesList } from "../loaders/propertiesData.ts";
 
 export interface Props {
-  propertiesList?: PropertiesList;
+  propertiesList?: PropertiesList;  
+  showPriceText?: boolean;
+  priceText?: string;
 }
 
-const HeroProductPage = ({propertiesList = []}: Props) => {
+const HeroProductPage = ({showPriceText, priceText, propertiesList = []}: Props) => {
   
   const currentSlug = window?.location?.pathname?.split("/")[2];
   const property = propertiesList.filter(prop => {
@@ -39,6 +41,9 @@ const HeroProductPage = ({propertiesList = []}: Props) => {
       {/* Product Details */}
       <div className="container mt-8 lg:px-[5%]">
         <h2 className="text-[32px] font-extrabold text-privia-passion">{property[0]?.title}</h2>
+        {showPriceText && (
+          <span class="w-[150px] text-xs">{priceText}</span>
+        )}
         <p className="text-2xl mt-2 text-[#787878] font-extrabold">{property[0]?.price}</p>
       </div>
       <div className="container flex flex-col md:flex-rowgap-4 w-full mt-4 lg:px-[5%]">
@@ -63,15 +68,15 @@ const HeroProductPage = ({propertiesList = []}: Props) => {
 function GalleryProductPage({ images }: { images: string[] }) {
   const id = useId();
   const width = 650;
-  const height = 650;
+  const height = 450;
   const aspectRatio = `${width} / ${height}`;
 
   return (
     <div
       id={id}
-      class="grid grid-cols-[48px_1fr_48px] sm:grid-cols-[120px_1fr_120px] grid-rows-[1fr_48px_1fr_64px]"
+      class="grid grid-cols-[48px_1fr_48px] sm:grid-cols-[120px_1fr_120px] grid-rows-[1fr_48px_1fr_64px] relative"
     >
-      <Slider class="carousel carousel-center w-full col-span-full row-span-full gap-2 max-w-[650px] max-h-[650px]">
+      <Slider class="carousel carousel-center w-full col-span-full row-span-full gap-2 max-w-[650px] max-h-[280px] lg:max-h-[450px] overflow-hidden">
         {images?.map((image, index) => (
           <Slider.Item
             index={index}
@@ -122,7 +127,7 @@ function Dots({ images }: { images: string[] }) {
 function Buttons() {
   return (
     <>
-      <div class="flex items-center justify-center z-10 col-start-1 row-start-2">
+      <div class="flex items-center justify-center z-10 col-start-1 row-start-2 absolute left-0 top-[15%]">
         <Slider.PrevButton>
           <Icon
             class="text-white"
@@ -132,7 +137,7 @@ function Buttons() {
           />
         </Slider.PrevButton>
       </div>
-      <div class="flex items-center justify-center z-10 col-start-3 row-start-2">
+      <div class="flex items-center justify-center z-10 col-start-3 row-start-2 absolute right-0 top-[15%]">
         <Slider.NextButton>
           <Icon
             class="text-white"

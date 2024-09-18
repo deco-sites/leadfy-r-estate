@@ -10,7 +10,7 @@
       "propertiesList": {
         "__resolveType": "site/loaders/propertiesData.ts"
       },
-      "showPriceText": true,
+      "showPriceText": false,
       "priceText": "Starts at"
     },
     {
@@ -43,6 +43,12 @@
         "__resolveType": "website/sections/Seo/Seo.tsx",
         "title": "Privia",
         "titleTemplate": "%s"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/GlobalTags.tsx"
       }
     }
   ],
