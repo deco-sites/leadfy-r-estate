@@ -1,14 +1,14 @@
 {
   "seo": {
     "type": "website",
-    "title": "Landing",
     "jsonLDs": [],
     "noIndexing": false,
-    "description": "Improve your page performance with deco.cx",
-    "titleTemplate": "Landing | deco.cx",
-    "descriptionTemplate": "%s | Deco.cx",
-    "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/4763/0fba8a8c-ee79-47e1-8f9d-863658d056cc",
-    "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/4763/1350f37f-88ab-4cf1-bcf6-c386bcf8b238"
+    "description": "Luxury Concierge Services for Living and Investing in Florida Real Estate",
+    "titleTemplate": "Privia",
+    "favicon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/35ccca44-0374-4516-be97-db1d3afbb8b7/Frame-1533210158.png",
+    "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/eadf57f4-3adc-4dba-8735-2030fd0406e1/Frame-1533210159.png",
+    "title": "Live Privia",
+    "descriptionTemplate": "%s"
   },
   "global": [
     {
