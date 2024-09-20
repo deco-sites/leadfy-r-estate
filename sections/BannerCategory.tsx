@@ -22,7 +22,7 @@ export interface Props {
 export default function BannerCategory({ image, imageMobile, content }: Props) {
     
     return (
-        <div class="w-full lg:mt-11">
+        <div class="w-full mt-[76px] lg:mt-[144px]">
             <a href={content?.url} class="w-full">
                 <div class="w-full">
                     <Image
