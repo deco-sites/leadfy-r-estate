@@ -8,11 +8,11 @@
     {
       "__resolveType": "site/sections/BannerCategory.tsx",
       "image": {
-        "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/399e731a-9bb7-4334-8f02-858288780044/Frame-1533210136.png",
+        "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/a737e8c7-be04-4835-8ef1-4c713ed0cf1a/Frame-1533210160.png",
         "alt": "Privia"
       },
       "imageMobile": {
-        "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/2b0ebe33-ed99-42fe-a216-2501ba730fae/Frame-1533210137.png",
+        "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/ad82488d-57b5-4355-8549-7d70865d7ae9/Frame-1533210161.png",
         "alt": "Privia Mobile"
       },
       "content": {
