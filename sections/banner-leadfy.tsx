@@ -1,28 +1,7 @@
-import { Airtable } from "site/types/airtable.ts";
-import LeadForm from "site/islands/LeadForm.tsx";
 import { ImageWidget } from "apps/admin/widgets.ts";
 import Slider from "site/components/ui/Slider.tsx";
 import { useId } from "site/sdk/useId.ts";
 import Icon from "site/components/ui/Icon.tsx";
-
-export interface Placeholders {
-  /** @description Texto do botão de envio */
-  submitButtonText?: string;
-  /** @description Campo de nome */
-  nome: string;
-  /** @description Campo de email */
-  email: string;
-  /** @description Campo de telefone */
-  telefone: string;
-  /** @description Campo de marca */
-  marca: string;
-  /** @description Campo de modelo */
-  modelo: string;
-  /** @description Campo de ano */
-  ano: string;
-  /** @description Campo de KM Atual */
-  kmAtual: string;
-}
 
 export interface BannerMedia {
   image?: ImageWidget;
@@ -38,12 +17,10 @@ export interface Banner {
   /** @description Abrir o link em uma nova guia */
   openInNewTab?: boolean;
 }
+
 export interface Props {
   title?: string;
   description?: string;
-  /** @description Dados do Airtable para integração do formulário */
-  airtable?: Airtable;
-  successMessage?: string;
   banners?: Banner[];
   /** @description Banners infinitos */
   infiniteBanners?: boolean;
@@ -60,29 +37,16 @@ export interface Props {
   mobileBannersWidth?: number;
   /** @description Altura dos banners no mobile */
   mobileBannersHeight?: number;
-  placeholders?: Placeholders;
 }
 
 function HeroLeadCapture({
   title = "",
   description = "",
-  airtable,
-  successMessage = "Sucesso! Nossa equipe entrará em contato.",
   banners = [],
   desktopBannersWidth = 1440,
   desktopBannersHeight = 300,
   mobileBannersWidth = 375,
   mobileBannersHeight = 400,
-  placeholders = {
-    submitButtonText: "Avançar",
-    nome: "Nome",
-    email: "E-mail",
-    telefone: "Telefone",
-    marca: "Marca",
-    modelo: "Modelo",
-    ano: "Ano",
-    kmAtual: "KM Atual",
-  },
   infiniteBanners = false,
   interval,
 }: Props) {
@@ -174,13 +138,6 @@ function HeroLeadCapture({
           <p
             class="text-xl"
             dangerouslySetInnerHTML={{ __html: description }}
-          />
-        </div>
-        <div class="w-full md:w-1/2">
-          <LeadForm
-            airtable={airtable}
-            successMessage={successMessage}
-            placeholders={placeholders}
           />
         </div>
       </div>
