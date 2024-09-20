@@ -28,7 +28,7 @@ export default function BannerCategory({ image, imageMobile, content }: Props) {
                     <Image
                         src={image?.src || ""}
                         width={1430}
-                        height={300}
+                        height={400}
                         alt={image?.alt || ""}
                         class="hidden w-full lg:block"
                     />
