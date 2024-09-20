@@ -26,7 +26,7 @@ const HeroProductPage = ({showPriceText, priceText, propertiesList = []}: Props)
 
   return (
     <div className="container mt-28 mx-auto px-4 py-16 lg:px-0">
-      <div id={id} className="flex justify-center space-x-4 lg:px-[5%]">
+      <div id={id} className="flex justify-between space-x-4 lg:px-[5%]">
  
         <GalleryProductPage
                 images={property[0]?.images}

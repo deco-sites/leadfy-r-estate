@@ -114,9 +114,9 @@ export default function Footer({
               <Image
                 src={logo.src || ""}
                 width={100}
-                height={28}
+                height={35}
                 alt={logo.alt}
-                class="w-[120px] h-11 object-contain"
+                class="w-[120px] h-11 object-fill"
               />
             </div>
             <div class="lg:w-[60%]">
