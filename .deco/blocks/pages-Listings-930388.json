@@ -30,6 +30,23 @@
       }
     },
     {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/banner-leadfy.tsx",
+        "banners": [
+          {
+            "image": {
+              "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/9b3a8b6f-3fcc-4c1c-9aec-260e1ce9a131/Frame-1533210136.png"
+            }
+          }
+        ],
+        "maxWidthDesktop": 1440,
+        "maxHeightDesktop": 300,
+        "maxWidthMobile": 375,
+        "maxHeightMobile": 300
+      }
+    },
+    {
       "__resolveType": "site/sections/Shelf.tsx",
       "propertiesList": {
         "__resolveType": "site/loaders/propertiesData.ts"

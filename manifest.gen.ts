@@ -7,7 +7,7 @@ import * as $$$$$$$$$$$1 from "./apps/site.ts";
 import * as $$$0 from "./loaders/propertiesData.ts";
 import * as $$$$$$0 from "./sections/AboutUsBody.tsx";
 import * as $$$$$$1 from "./sections/AdvenceSearch.tsx";
-import * as $$$$$$24 from "./sections/banner_leadfy.tsx";
+import * as $$$$$$24 from "./sections/banner-leadfy.tsx";
 import * as $$$$$$2 from "./sections/BannerAboutUs.tsx";
 import * as $$$$$$3 from "./sections/BannerCategory.tsx";
 import * as $$$$$$4 from "./sections/BlogPosts.tsx";
@@ -41,7 +41,7 @@ const manifest = {
   "sections": {
     "site/sections/AboutUsBody.tsx": $$$$$$0,
     "site/sections/AdvenceSearch.tsx": $$$$$$1,
-    "site/sections/banner_leadfy.tsx": $$$$$$24,
+    "site/sections/banner-leadfy.tsx": $$$$$$24,
     "site/sections/BannerAboutUs.tsx": $$$$$$2,
     "site/sections/BannerCategory.tsx": $$$$$$3,
     "site/sections/BlogPosts.tsx": $$$$$$4,
