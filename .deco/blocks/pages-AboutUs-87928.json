@@ -19,7 +19,24 @@
       "storyContent": "<p>At Privia, we redefine luxury real estate by offering more than just properties; we provide a comprehensive concierge service designed to turn dreams of living and investing in Florida into reality. Our mission is to seamlessly connect international investors, primarily from Brazil, with exclusive opportunities to invest in the U.S. real estate market, while also offering personalized guidance through every step of the journey.<br><br></p><p>With a sophisticated, consultative approach, we ensure that our clients receive expert support in immigration, accounting, legal matters, and real estate acquisition. Privia is about more than just transactions—it’s about securing your future, elevating your lifestyle, and offering peace of mind during high-value investments. We understand that luxury is about trust, security, and a personalized experience that transcends borders.<br><br></p><p>Our team is dedicated to making the American dream accessible, offering not only investment opportunities but also an entry into an elevated way of life, whether for personal use or to build a prosperous legacy. At Privia, you’re not just buying real estate—you’re investing in a vision of the future, with a trusted partner by your side.</p>",
       "values": [
         {
-          "title": "Exce"
+          "title": "Excellence",
+          "content": "<p>We pride ourselves on offering an elevated concierge experience that goes beyond traditional real estate services. Our consultative approach ensures personalized attention to each client, making their journey seamless, secure, and stress-free.</p>",
+          "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/0a244afb-22c7-43e5-be03-2b54ca75c2df/cup.png"
+        },
+        {
+          "title": "Trust",
+          "content": "<p>Building long-lasting relationships with our clients is at the core of what we do. We prioritize transparency and honesty, ensuring that every decision is made with the best interests of our clients in mind.</p>",
+          "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/0a81465d-beed-44a5-88db-409630c18a65/verify.png"
+        },
+        {
+          "title": "Luxury",
+          "content": "<p>At Privia, luxury is more than just a product—it’s a lifestyle. We are committed to delivering sophisticated, tailored solutions that embody exclusivity and elegance, making our clients feel valued at every step.</p>",
+          "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/a3ebc358-91e1-4539-ab57-b2a559567618/crown.png"
+        },
+        {
+          "title": "Global Vision",
+          "content": "<p>We focus on international investors, offering precise local expertise in Florida real estate, combining global perspective with local knowledge for a unique advantage.</p>",
+          "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/53d5dcff-9ab3-4804-a352-a71b7c9a1bc3/global.png"
         }
       ],
       "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/409bda4d-7438-4a59-8828-63bfeb6b57be/IMG_0984-(1).PNG",
