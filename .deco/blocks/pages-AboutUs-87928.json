@@ -24,8 +24,8 @@
         "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/a2f5e207-679e-410f-9580-5b4ae4c8ed41/Conference-1.png",
         "placement": "left",
         "disableSpacing": {
-          "top": true,
-          "bottom": true
+          "top": false,
+          "bottom": false
         },
         "cta": []
       }
