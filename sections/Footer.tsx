@@ -193,7 +193,7 @@ export default function Footer({
               ))}
             </div>
           </div>
-          <div class="flex gap-9">
+          <div class="flex g  ap-9">
             {links?.map((link) => (
               <div>
                 <h4 class="font-semibold text-2xl mb-8 text-white">{link.title}</h4>
@@ -221,8 +221,9 @@ export default function Footer({
               <span>{madeWith?.label}</span>
               <Image
                 src={madeWith?.src || ""}
-                width={100}
-                height={28}
+                width={130}
+                height={70}
+                class="w-[70px]"
                 alt={madeWith?.label}
               />
             </a>

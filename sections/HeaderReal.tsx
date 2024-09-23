@@ -56,8 +56,8 @@ const HeaderReal = ({ email, facebook, instagram, phone, imagem, logo, secondLog
                     <div className="flex items-center">
                         <Image
                             src={logo || ""}
-                            width={100}
-                            height={35}
+                            width={140}
+                            height={50}
                             class="w-[120px] h-11 object-fill mr-5"
                         />
                     </div>
@@ -78,9 +78,9 @@ const HeaderReal = ({ email, facebook, instagram, phone, imagem, logo, secondLog
                         </nav>
                         <Image
                             src={secondLogo || ""}
-                            class=" object-cover mr-4"
-                            width={100}
-                            height={50}
+                            class="w-[100px] object-fill mr-4"
+                            width={145}
+                            height={75}
                         />
                     </div>
                 </div>
