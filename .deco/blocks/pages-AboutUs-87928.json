@@ -15,6 +15,22 @@
       }
     },
     {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/ImageWithParagraph.tsx",
+        "title": "#LivePrivia",
+        "tagline": "Thrive With Privia",
+        "description": "At Privia, we redefine luxury real estate by offering more than just properties; we provide a comprehensive concierge service designed to turn dreams of living and investing in Florida into reality. Our mission is to seamlessly connect international investors, primarily from Brazil, with exclusive opportunities to invest in the U.S. real estate market, while also offering personalized guidance through every step of the journey.\n\n\n\nWith a sophisticated, consultative approach, we ensure that our clients receive expert support in immigration, accounting, legal matters, and real estate acquisition. Privia is about more than just transactions—it’s about securing your future, elevating your lifestyle, and offering peace of mind during high-value investments. We understand that luxury is about trust, security, and a personalized experience that transcends borders.\n\n\n\nOur team is dedicated to making the American dream accessible, offering not only investment opportunities but also an entry into an elevated way of life, whether for personal use or to build a prosperous legacy. At Privia, you’re not just buying real estate—you’re investing in a vision of the future, with a trusted partner by your side.",
+        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/409bda4d-7438-4a59-8828-63bfeb6b57be/IMG_0984-(1).PNG",
+        "placement": "left",
+        "disableSpacing": {
+          "top": true,
+          "bottom": true
+        },
+        "cta": []
+      }
+    },
+    {
       "__resolveType": "site/sections/AboutUsBody.tsx",
       "storyContent": "<p>At Privia, we redefine luxury real estate by offering more than just properties; we provide a comprehensive concierge service designed to turn dreams of living and investing in Florida into reality. Our mission is to seamlessly connect international investors, primarily from Brazil, with exclusive opportunities to invest in the U.S. real estate market, while also offering personalized guidance through every step of the journey.<br><br></p><p>With a sophisticated, consultative approach, we ensure that our clients receive expert support in immigration, accounting, legal matters, and real estate acquisition. Privia is about more than just transactions—it’s about securing your future, elevating your lifestyle, and offering peace of mind during high-value investments. We understand that luxury is about trust, security, and a personalized experience that transcends borders.<br><br></p><p>Our team is dedicated to making the American dream accessible, offering not only investment opportunities but also an entry into an elevated way of life, whether for personal use or to build a prosperous legacy. At Privia, you’re not just buying real estate—you’re investing in a vision of the future, with a trusted partner by your side.</p>",
       "values": [
