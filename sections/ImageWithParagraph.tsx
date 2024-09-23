@@ -52,8 +52,8 @@ export default function ImageWithParagraph({
       >
         <div class="w-full md:w-1/2 rounded-full overflow-hidden">
           <Image
-            width={640}
-            height={640}
+            width={500}
+            height={500}
             class="object-fit z-10 rounded-full"
             sizes="(max-width: 640px) 100vw, 30vw"
             src={image}
