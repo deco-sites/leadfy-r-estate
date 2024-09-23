@@ -44,6 +44,12 @@
         "__resolveType": "website/sections/Seo/Seo.tsx",
         "title": "Privia"
       }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/GlobalTags.tsx"
+      }
     }
   ],
   "seo": {
