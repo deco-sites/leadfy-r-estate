@@ -10,7 +10,7 @@
       "propertiesList": {
         "__resolveType": "site/loaders/propertiesData.ts"
       },
-      "showPriceText": false,
+      "showPriceText": true,
       "priceText": "Starts at"
     },
     {
