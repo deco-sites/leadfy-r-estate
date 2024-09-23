@@ -46,14 +46,6 @@
     },
     {
       "__resolveType": "Footer"
-    },
-    {
-      "__resolveType": "site/sections/BannerAboutUs.tsx",
-      "banner": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/33807118-8827-451d-a54e-86b7bdafceb6/Frame-1533210136.png",
-      "mobileBanner": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/71cae0c6-6d7e-4ded-ab0a-066a600e3139/Frame-1533210137.png",
-      "title": "About Us",
-      "ctaLabel": "FOLLOW US",
-      "ctaUrl": "https://www.instagram.com/jofernandezusa/"
     }
   ],
   "seo": {
