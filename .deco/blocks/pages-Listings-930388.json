@@ -13,7 +13,7 @@
       "section": {
         "__resolveType": "site/sections/TitleSection.tsx",
         "title": "Thrive With Privia",
-        "description": "<p><span style=\"font-size: 14pt; color: rgb(255, 255, 255);\" data-mce-style=\"font-size: 14pt; color: rgb(255, 255, 255);\">Luxury Concierge Services for Living and Investing in Florida Real Estate</span></p>"
+        "description": "<p><span style=\"font-size: 14pt;\" data-mce-style=\"font-size: 14pt;\"><strong><span style=\"color: rgb(255, 63, 63);\" data-mce-style=\"color: rgb(255, 63, 63);\">Luxury Concierge Services for Living and Investing in Florida Real Estate</span></strong></span></p>"
       }
     },
     {
