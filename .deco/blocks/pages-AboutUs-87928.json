@@ -25,7 +25,7 @@
         "placement": "left",
         "disableSpacing": {
           "top": false,
-          "bottom": false
+          "bottom": true
         },
         "cta": []
       }
@@ -37,7 +37,7 @@
         "title": "Our Founder & CEO",
         "tagline": "Success Designed For You",
         "description": "Joceli Fernandez is a leading expert in the luxury sector, specializing in concierge services tailored to clients looking to live and invest in Florida real estate. As the visionary CEO and Founder of Privia, Joceli has redefined luxury living by providing a seamless, high-end experience for discerning clients. With a deep understanding of the nuances of the luxury market and a commitment to exceptional service, she guides her clients through every aspect of their investment journey, offering personalized insights and the keys to success in one of the world's most sought-after real estate markets.",
-        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/409bda4d-7438-4a59-8828-63bfeb6b57be/IMG_0984-(1).PNG",
+        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/94774933-7ee5-4c5f-9c0c-75c538a2e06b/IMG_0985.PNG",
         "placement": "right",
         "disableSpacing": {
           "top": true,
