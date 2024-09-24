@@ -13,10 +13,10 @@ const PropertyOverview = ({ propertiesList = [] }: Props) => {
     }
   })
 
-  console.log(property[0]?.status[0])
+  console.log(property[0])
 
   return (
-    <div class="container mx-auto px-4 flex flex-col gap-[5%] lg:px-[5%] lg:flex-row">
+    <div class="container mx-auto px-4 flex flex-col gap-4 lg:gap-[5%] lg:px-[5%] lg:flex-row">
       <div>
         <h3 class="text-[26px] font-extrabold text-[#ff3f3f] mb-8">Overview</h3>
         <div class="grid grid-cols-2 gap-4 w-fit">
@@ -37,7 +37,7 @@ const PropertyOverview = ({ propertiesList = [] }: Props) => {
         <h3 class="text-[26px] font-extrabold text-[#ff3f3f] mb-8">Features</h3>
         <div class="flex flex-col gap-4 w-fit">
           {
-            property[0]?.features.split('|')?.map((feature, index) => (
+            property[0]?.features?.split('|')?.map((feature, index) => (
               <div key={index} class="text-gray-900"><span>&#8226;</span> {feature}</div>
             ))
           }
