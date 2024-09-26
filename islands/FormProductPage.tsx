@@ -14,8 +14,8 @@ const FormProductPage = ({ storeId }: Props) => {
     const buttonDisabled = useSignal(false);
 
     function clearFields() {
-        nome.value = "";
-        telefone.value = "";
+        name.value = "";
+        phone.value = "";
         email.value = "";
     }
 
@@ -78,8 +78,9 @@ const FormProductPage = ({ storeId }: Props) => {
                         className="w-full p-3 border border-gray-300 rounded"
                         value={name.value}
                         required
-                        changeState={(value) => {
-                            name.value = value;
+                        onChange={(e) => {
+                            e.preventDefault()
+                            name.value = (e.target as HTMLInputElement).value;
                         }}
                     />
                     <input
@@ -88,8 +89,9 @@ const FormProductPage = ({ storeId }: Props) => {
                         className="w-full p-3 border border-gray-300 rounded"
                         value={email.value}
                         required
-                        changeState={(value) => {
-                            email.value = value;
+                        onChange={(e) => {
+                            e.preventDefault()
+                            email.value = (e.target as HTMLInputElement).value;
                         }}
                     />
                     <input
