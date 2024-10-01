@@ -32,15 +32,3 @@ export default function Shelf({ priceText, showPriceText, defaultOrder = "defaul
     </div>
   );
 }
-
-// Update ShelfCard component to include dark gray color for price text
-function ShelfCard({ priceText, showPriceText, property }) {
-  return (
-    <div>
-      {/* Other property details */}
-      {showPriceText && (
-        <p class="text-gray-700">{priceText} {property.price}</p>
-      )}
-    </div>
-  );
-}
