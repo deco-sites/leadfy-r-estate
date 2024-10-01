@@ -7,11 +7,6 @@ import ShelfCard from "../components/ui/ShelfCard.tsx";
 export interface Props {
   propertiesList?: PropertiesList;
   defaultOrder?: string;
-  /**
-   * @description Choose the color for the price text
-   * @format color-input
-   */
-  priceTextColor?: string;
   showPriceText?: boolean;
   priceText?: string;
 }
@@ -19,7 +14,7 @@ export interface Props {
 export default function Shelf({ priceText, showPriceText, defaultOrder = "default",propertiesList=[]}: Props) {
  
   return (
-    <div class="w-full px-4 mt-10 flex flex-col justify-start items-center gap-5 lg:w-4/5 lg:mx-auto" style={{ color: priceTextColor }}>
+    <div class="w-full px-4 mt-10 flex flex-col justify-start items-center gap-5 lg:w-4/5 lg:mx-auto">
       {/* <div class="w-full flex">
         <ShelfFilter defaultOrder={defaultOrder} />
       </div> */}

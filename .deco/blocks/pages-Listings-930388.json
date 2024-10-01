@@ -33,7 +33,8 @@
         }
       },
       "showPriceText": true,
-      "priceText": "Starts at"
+      "priceText": "Starts at",
+      "priceTextColor": "#f1efef"
     },
     {
       "__resolveType": "Footer"
