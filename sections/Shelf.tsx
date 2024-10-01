@@ -21,7 +21,7 @@ export default function Shelf({ priceText, showPriceText, defaultOrder = "defaul
       <div class="w-full flex flex-col gap-4 md:grid md:grid-cols-2 lg:grid-cols-3">
         
         {
-          propertiesList.map(property => {
+          propertiesList.map((property) => {
             return (
               <ShelfCard priceText={priceText} showPriceText={showPriceText} property={property} />
             )
@@ -29,6 +29,18 @@ export default function Shelf({ priceText, showPriceText, defaultOrder = "defaul
         }
         
       </div>
+    </div>
+  );
+}
+
+// Update ShelfCard component to include dark gray color for price text
+function ShelfCard({ priceText, showPriceText, property }) {
+  return (
+    <div>
+      {/* Other property details */}
+      {showPriceText && (
+        <p class="text-gray-700">{priceText} {property.price}</p>
+      )}
     </div>
   );
 }
