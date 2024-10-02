@@ -28,6 +28,14 @@ export interface Props {
     src?: ImageWidget;
     alt?: string;
   };
+  secondaryLogo?: {
+    src?: ImageWidget;
+    alt?: string;
+  };
+  tertiaryLogo?: {
+    src?: ImageWidget;
+    alt?: string;
+  };
   links?: Column[];
   subscribe?: Subscribe;
   madeWith?: {
@@ -45,6 +53,14 @@ export default function Footer({
     src:
       "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/67120bcd-936a-4ea5-a760-02ed5c4a3d04",
     alt: "Logo",
+  },
+  secondaryLogo = {
+    src: "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1818/ff6bb37e-0eab-40e1-a454-86856efc278e",
+    alt: "Secondary Logo",
+  },
+  tertiaryLogo = {
+    src: "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1818/ff6bb37e-0eab-40e1-a454-86856efc278e",
+    alt: "Tertiary Logo",
   },
   links = [
     {
@@ -109,13 +125,27 @@ export default function Footer({
     <div class="mx-auto md:px-[5%] px-4 pt-10 mt-6 text-sm bg-privia-prestige">
       <div class="flex flex-col gap-20">
         <div class="flex flex-col gap-6 md:gap-48 lg:flex-row">
-          <div class="flex flex-col">
-            <div class="mb-6">
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center gap-4">
               <Image
                 src={logo.src || ""}
                 width={100}
                 height={35}
                 alt={logo.alt}
+                class="w-[120px] h-11 object-fill"
+              />
+              <Image
+                src={secondaryLogo.src || ""}
+                width={100}
+                height={35}
+                alt={secondaryLogo.alt}
+                class="w-[120px] h-11 object-fill"
+              />
+              <Image
+                src={tertiaryLogo.src || ""}
+                width={100}
+                height={35}
+                alt={tertiaryLogo.alt}
                 class="w-[120px] h-11 object-fill"
               />
             </div>

@@ -15,7 +15,9 @@
       "title": "PAGES"
     }
   ],
-  "bottomLinks": [],
+  "bottomLinks": [
+    {}
+  ],
   "social": [
     {
       "network": "Instagram",
@@ -35,5 +37,8 @@
     "label": "Made with",
     "href": "https://leadfy.me"
   },
-  "copyright": "© 2K24 Privia, Inc. All Rights Reserved."
+  "copyright": "© 2K24 Privia, Inc. All Rights Reserved.",
+  "secondaryLogo": {
+    "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/285bd980-0a1e-43e0-be86-9526667facad/equal-housing-logowhite-250.png"
+  }
 }
