@@ -56,16 +56,16 @@ const HeaderReal = ({ email, facebook, instagram, phone, imagem, logo, secondLog
                     <div className="flex items-center">
                         <Image
                             src={logo || ""}
-                            width={200}
-                            height={104}
+                            width={145}
+                            height={75}
                             class="w-[120px] h-11 object-fill mr-5"
                         />
                     </div>
                     <div className="block lg:hidden items-center gap-2 z-50">
                         <MenuMobile items={menuItems} />
                     </div>
-                    <div className="hidden lg:flex items-center gap-2 w-full">
-                        <nav className="flex justify-start items-center gap-2 w-full">
+                    <div className="hidden lg:flex items-center justify-between gap-2 w-full">
+                        <nav className="flex justify-center items-center gap-2 flex-grow">
                             {menuItems?.map((item: MenuNavItem) => (
                                 <a
                                     key={item.label}
@@ -79,7 +79,7 @@ const HeaderReal = ({ email, facebook, instagram, phone, imagem, logo, secondLog
                         <Image
                             src={secondLogo || ""}
                             class="w-[100px] object-fill mr-4"
-                            width={145}
+                            width={205}
                             height={75}
                         />
                     </div>
