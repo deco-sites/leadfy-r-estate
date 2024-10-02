@@ -1,11 +1,11 @@
 {
   "__resolveType": "site/sections/BannerCategory.tsx",
   "image": {
-    "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/3cd1cb32-57db-4171-a669-a5934f64ee21/Frame-1533210184.png",
+    "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/8bd0aede-ac5e-419f-b41b-be24272cbbd1/Frame-1533210185.png",
     "alt": "Privia"
   },
   "imageMobile": {
-    "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/41c549ff-feb7-47aa-850f-4b2d7eec0d8c/Frame-1533210161.png",
+    "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/65122f55-4eb4-40b1-886b-a9ec72bce5aa/Frame-1533210161.png",
     "alt": "Privia"
   },
   "content": {
