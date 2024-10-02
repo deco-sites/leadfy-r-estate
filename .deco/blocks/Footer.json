@@ -25,9 +25,9 @@
     }
   ],
   "subscribe": {
-    "instructions": "<p><span style=\"color: #f1faee\">EXP Realty LLC.</span></p><p><span style=\"color: #f1faee\">10752 Deerwood Park Blvd Suite #100 Jacksonville,&nbsp;FL&nbsp;32256</span></p>",
+    "instructions": "<p><span style=\"color: #ff3f3f; font-size: 14pt\">International Real Estate Advisor </span></p><p></p>",
     "title": "Joceli Fernandez",
-    "description": "International Real Estate Advisor "
+    "description": "EXP Realty LLC.  10752 Deerwood Park Blvd Suite #100 Jacksonville, FL 32256"
   },
   "logo": {
     "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/aa7ff15e-12d4-4d2d-acbf-de8779b76186/Frame-1533210176.png"
