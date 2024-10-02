@@ -56,8 +56,8 @@ const HeaderReal = ({ email, facebook, instagram, phone, imagem, logo, secondLog
                     <div className="flex items-center">
                         <Image
                             src={logo || ""}
-                            width={600}
-                            height={400}
+                            width={200}
+                            height={104}
                             class="w-[120px] h-11 object-fill mr-5"
                         />
                     </div>
