@@ -58,7 +58,7 @@ const HeaderReal = ({ email, facebook, instagram, phone, imagem, logo, secondLog
                             src={logo || ""}
                             width={145}
                             height={75}
-                            class="w-[120px] h-11 object-fill mr-5"
+                            class="w-[120px] h-14 object-fill mx-auto"
                         />
                     </div>
                     <div className="block lg:hidden items-center gap-2 z-50">
