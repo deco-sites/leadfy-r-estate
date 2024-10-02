@@ -27,7 +27,7 @@
   "subscribe": {
     "instructions": "<p><span style=\"color: #f1faee\">EXP Realty LLC.</span></p><p><span style=\"color: #f1faee\">10752 Deerwood Park Blvd Suite #100 Jacksonville,&nbsp;FL&nbsp;32256</span></p>",
     "title": "Joceli Fernandez",
-    "description": "Your Home, Your Legacy"
+    "description": "International Real Estate Advisor "
   },
   "logo": {
     "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/aa7ff15e-12d4-4d2d-acbf-de8779b76186/Frame-1533210176.png"
@@ -39,6 +39,9 @@
   },
   "copyright": "© 2K24 Privia, Inc. All Rights Reserved.",
   "secondaryLogo": {
-    "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/285bd980-0a1e-43e0-be86-9526667facad/equal-housing-logowhite-250.png"
+    "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/caccd818-04df-450b-8499-c9da064c17bf/Frame-1533210181.png"
+  },
+  "tertiaryLogo": {
+    "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-r-estate/9c552825-a67b-4669-ada6-38dc14cfed95/Frame-1533210181_w.png"
   }
 }
