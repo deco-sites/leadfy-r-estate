@@ -11,7 +11,8 @@
         "__resolveType": "site/loaders/propertiesData.ts"
       },
       "showPriceText": true,
-      "priceText": "Starts at"
+      "priceText": "Starts at",
+      "storeId": "tblRyZVEFm0pl7BHu"
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",

@@ -3,6 +3,7 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $_app from "./routes/_app.tsx";
+import * as $api_airtable from "./routes/api/airtable.ts";
 import * as $AdvenceSearch from "./islands/AdvenceSearch.tsx";
 import * as $FeaturedPropertyCard from "./islands/FeaturedPropertyCard.tsx";
 import * as $FormProductPage from "./islands/FormProductPage.tsx";
@@ -20,6 +21,7 @@ import { type Manifest } from "$fresh/server.ts";
 const manifest = {
   routes: {
     "./routes/_app.tsx": $_app,
+    "./routes/api/airtable.ts": $api_airtable,
   },
   islands: {
     "./islands/AdvenceSearch.tsx": $AdvenceSearch,

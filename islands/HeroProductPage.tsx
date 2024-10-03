@@ -11,9 +11,10 @@ export interface Props {
   propertiesList?: PropertiesList;  
   showPriceText?: boolean;
   priceText?: string;
+  storeId?: string;
 }
 
-const HeroProductPage = ({showPriceText, priceText, propertiesList = []}: Props) => {
+const HeroProductPage = ({showPriceText, priceText, storeId, propertiesList = []}: Props) => {
   
   const currentSlug = window?.location?.pathname?.split("/")[2];
   const property = propertiesList.filter(prop => {
@@ -34,7 +35,7 @@ const HeroProductPage = ({showPriceText, priceText, propertiesList = []}: Props)
         
         {/* Form */}
         <div className="hidden md:block">
-          <FormProductPage />
+          <FormProductPage storeId={storeId}/>
         </div>
       </div>
 
