@@ -39,10 +39,10 @@ const HeaderReal = ({ email, facebook, instagram, phone, imagem, logo, secondLog
                     </div>
                     <div className="flex items-center space-x-4">
                         {facebook && (
-                            <a href={facebook}><Icon class="text-white" size={18} id="Facebook" strokeWidth={2} /></a>
+                            <a href={facebook} target="_blank" rel="noopener noreferrer"><Icon class="text-white" size={18} id="Facebook" strokeWidth={2} /></a>
                         )}
                         {instagram && (
-                            <a href={instagram}><Icon class="text-white" size={18} id="Instagram" strokeWidth={2} /></a>
+                            <a href={instagram} target="_blank" rel="noopener noreferrer"><Icon class="text-white" size={18} id="Instagram" strokeWidth={2} /></a>
                         )}
                         <div className="flex items-center border-l-2 px-2 border-white gap-2">
                             <Icon class="text-white" size={18} id="Phone" strokeWidth={2} />
