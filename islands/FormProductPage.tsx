@@ -28,7 +28,9 @@ const FormProductPage = ({ storeId }: Props) => {
             return null
         }
         
-        buttonText.value = "Sending...";
+        buttonText.value = "Sent!";
+        clearFields();
+
         const data = {
             "records": [
                 {
