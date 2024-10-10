@@ -29,8 +29,7 @@ const FormProductPage = ({ storeId }: Props) => {
         }
         
         buttonText.value = "Sent!";
-        clearFields();
-
+        
         const data = {
             "records": [
                 {
@@ -45,7 +44,8 @@ const FormProductPage = ({ storeId }: Props) => {
                 },
             ],
         };
-
+        clearFields();
+        
         const options = {
             "method": "POST",
             headers: {
