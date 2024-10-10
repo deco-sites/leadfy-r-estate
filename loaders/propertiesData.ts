@@ -24,7 +24,6 @@ export default async function propertiesData(
     });    
     const posts = obj.data.post
     
-    console.log(posts[1]);
 
     const propertiesResult: string[] = posts.map((post: any) => {
         

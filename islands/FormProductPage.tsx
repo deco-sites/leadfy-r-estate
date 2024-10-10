@@ -10,32 +10,35 @@ const FormProductPage = ({ storeId }: Props) => {
     const name = useSignal("");
     const phone = useSignal("");
     const email = useSignal("");
+    const message = useSignal("");
     const buttonText = useSignal("Get in Touch");
     const buttonDisabled = useSignal(false);
 
     function clearFields() {
         name.value = "";
         phone.value = "";
-        email.value = "";
+        email.value = ""
+        message.value = "";
     }
 
     function saveLead() {
-        console.log('send lead', storeId)
-        console.log(name.value, phone.value, email.value)
+
         if (phone.value.length < 14) {
             alert("Enter a valid phone number");
             return null
         }
-
+        
         buttonText.value = "Sending...";
         const data = {
             "records": [
                 {
                     "fields": {
-                        "Nome": name.value,
-                        "Telefone": phone.value,
+                        "Name": name.value,
                         "Email": email.value,
-                        // "Property": vehicle["g:title"][0],
+                        "Phone": phone.value,
+                        "Property": window?.location?.href,
+                        "Message": message.value,
+                        "Created": new Date().toISOString().split('T')[0]
                     },
                 },
             ],
@@ -55,12 +58,12 @@ const FormProductPage = ({ storeId }: Props) => {
                     buttonText.value = "Sent!";
                     buttonDisabled.value = true;
                     clearFields();
-                    setTimeout(() => {
-                        buttonText.value = "Get in Touch";
-                        buttonDisabled.value = false;
-                    }, 2000);
                 }
-            });
+                setTimeout(() => {
+                    buttonText.value = "Get in Touch";
+                    buttonDisabled.value = false;
+                }, 2000);
+            })
     }
 
     return (
@@ -108,6 +111,11 @@ const FormProductPage = ({ storeId }: Props) => {
                     <textarea
                         placeholder="Your Message"
                         className="w-full p-3 border border-gray-300 rounded h-24"
+                        value={message.value}
+                        onChange={(e) => {
+                            e.preventDefault()
+                            message.value = (e.target as HTMLInputElement).value;
+                        }}
                     ></textarea>
 
                     {/* <div className="flex items-end">

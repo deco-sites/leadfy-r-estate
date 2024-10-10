@@ -6,6 +6,9 @@ export const handler: Handlers = {
     const searchParams = new URLSearchParams(url.search);
     const idLoja = searchParams.get("idLoja");
 
+    console.log("entrou na api");
+    console.log(req.body)
+
     const options = {
       "method": "POST",
       headers: {
