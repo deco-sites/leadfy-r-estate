@@ -63,7 +63,13 @@ const FormProductPage = ({ storeId }: Props) => {
                     buttonText.value = "Get in Touch";
                     buttonDisabled.value = false;
                 }, 2000);
-            })
+            }).catch(error => {
+                console.error('Error:', error);
+                setTimeout(() => {
+                    buttonText.value = "Get in Touch";
+                    buttonDisabled.value = false;
+                }, 2000);
+            });
     }
 
     return (
