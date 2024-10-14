@@ -46,7 +46,7 @@ export default async function propertiesData(
                 price: formatPrice(Number(post?.price?._text)),
                 rooms: post?.rooms?._text,
                 slug: post?.Slug?._text,
-                status: post?.Status?.map((status: any) => {return status._text}),
+                status: post?.property_status?._text,
                 title: post?.Title?._text,
                 type: post?.Type?._text,                
                 url: `/properties/${post?.Slug?._text}/${post?.ID?._text}`,
