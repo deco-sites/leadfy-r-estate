@@ -16,7 +16,7 @@ export default async function propertiesData(
     // const { slug, idloja } = props;
 
     const response = await fetch(
-        `https://darkgreen-sparrow-978409.hostingersite.com/wp-content/uploads/wpallexport/exports/b7548f9ce4b89f6dd0c98409d2a6622e/current-Leadfy.xml?wpae_nocache=1088820710`,
+        `https://darkgreen-sparrow-978409.hostingersite.com/wp-load.php?security_key=71970be4e06301b8&export_id=3&action=get_data`,
     );
     const text = await response.text();
     const obj = xml2js(text, {
