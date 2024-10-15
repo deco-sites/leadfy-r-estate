@@ -23,34 +23,33 @@ export default async function propertiesData(
         compact: true,
     });    
     const posts = obj.data.post
-    
 
     const propertiesResult: string[] = posts.map((post: any) => {
         
         return (
             {
-                areaSize: post?.area_size?._text,
-                bathrooms: post?.bathrooms?._text,
+                areaSize: post?.area_size?._cdata,
+                bathrooms: post?.bathrooms?._cdata,
                 description: post?.Content?._cdata,
                 features: post?.Feature?._text || post?.Feature?._cdata,
-                id: post?.ID?._text,
-                images: post?.ImageURL?._text?.split('|'),
-                imageFeatured: post?.ImageFeatured?._text,
-                label: post?.Label?._text,
-                location: post?.Location?._text,
+                id: post?.ID?._cdata,
+                images: post?.ImageURL?._cdata?.split('|'),
+                imageFeatured: post?.ImageFeatured?._cdata,
+                label: post?.Label?._cdata,
+                location: post?.Location?._cdata,
                 mapLocation: {
-                    lat: post?.lat?._text,
-                    lng: post?.lng?._text,
+                    lat: post?.lat?._cdata,
+                    lng: post?.lng?._cdata,
                 },
-                postModifiedDate: post?.PostModifiedDate?._text, 
-                price: formatPrice(Number(post?.price?._text)),
-                rooms: post?.rooms?._text,
-                slug: post?.Slug?._text,
-                status: post?.property_status?._text,
-                title: post?.Title?._text,
-                type: post?.Type?._text,                
-                url: `/properties/${post?.Slug?._text}/${post?.ID?._text}`,
-                yearBuilt: post?.year_built?._text
+                postModifiedDate: post?.PostModifiedDate?._cdata, 
+                price: formatPrice(Number(post?.Price?._cdata)),
+                rooms: post?.rooms?._cdata,
+                slug: post?.Slug?._cdata,
+                status: post?.property_status?._cdata,
+                title: post?.Title?._cdata,
+                type: post?.Type?._cdata,                
+                url: `/properties/${post?.Slug?._cdata}/${post?.ID?._cdata}`,
+                yearBuilt: post?.year_built?._cdata
             }
         )
     })

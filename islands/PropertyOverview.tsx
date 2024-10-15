@@ -13,8 +13,6 @@ const PropertyOverview = ({ propertiesList = [] }: Props) => {
     }
   })
 
-  console.log(property[0])
-
   return (
     <div class="container mx-auto px-4 flex flex-col gap-4 lg:gap-[5%] lg:px-[5%] lg:flex-row">
       <div>
@@ -27,7 +25,7 @@ const PropertyOverview = ({ propertiesList = [] }: Props) => {
           <div class="text-gray-900">{property[0]?.location}</div>
 
           <div class="font-bold text-gray-700"><span>&#8226;</span> Status</div>
-          <div class="text-gray-900">{property[0]?.status[0]?.replace('publish', '')}</div>
+          <div class="text-gray-900">{property[0]?.status[0]}</div>
 
           <div class="font-bold text-gray-700"><span>&#8226;</span> Year Built</div>
           <div class="text-gray-900">{property[0]?.yearBuilt}</div>
