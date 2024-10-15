@@ -5,7 +5,7 @@ export interface Props {
 }
 
 const PropertyOverview = ({ propertiesList = [] }: Props) => {
-
+  console.log(propertiesList)
   const currentSlug = window?.location?.pathname?.split("/")[2];
   const property = propertiesList.filter(prop => {
     if (prop?.slug === currentSlug) {
