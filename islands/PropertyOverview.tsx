@@ -25,7 +25,7 @@ const PropertyOverview = ({ propertiesList = [] }: Props) => {
           <div class="text-gray-900">{property[0]?.location}</div>
 
           <div class="font-bold text-gray-700"><span>&#8226;</span> Status</div>
-          <div class="text-gray-900">{property[0]?.status[0]}</div>
+          <div class="text-gray-900">{property[0]?.status}</div>
 
           <div class="font-bold text-gray-700"><span>&#8226;</span> Year Built</div>
           <div class="text-gray-900">{property[0]?.yearBuilt}</div>
