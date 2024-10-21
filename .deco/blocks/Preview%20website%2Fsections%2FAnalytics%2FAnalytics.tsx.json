@@ -1,3 +1,7 @@
 {
-  "__resolveType": "website/sections/Analytics/Analytics.tsx"
+  "__resolveType": "website/sections/Analytics/Analytics.tsx",
+  "trackingIds": [
+    "GTM-TNZ4GVW2"
+  ],
+  "googleAnalyticsIds": []
 }
