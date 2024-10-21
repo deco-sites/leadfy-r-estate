@@ -5,6 +5,12 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
+        "__resolveType": "GTM-Privia"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
         "__resolveType": "HeaderReal"
       }
     },
@@ -20,8 +26,8 @@
         "__resolveType": "site/sections/Hero.tsx",
         "title": "<p>#LivePrivia</p>",
         "description": "At Privia, we redefine luxury real estate by offering a personalized concierge service that goes beyond property transactions. Specializing in connecting international investors, especially from Brazil, with exclusive U.S. real estate opportunities, we provide expert guidance in immigration, legal, accounting, and real estate acquisition. Our consultative approach ensures a seamless experience, prioritizing trust, security, and an elevated lifestyle. Whether investing for personal use or building a legacy, Privia is your trusted partner in making the American dream a reality and securing your future with peace of mind.",
-        "cta": [],
-        "placement": "left"
+        "placement": "left",
+        "cta": []
       }
     },
     {
@@ -48,15 +54,6 @@
     },
     {
       "__resolveType": "Footer"
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "website/sections/Analytics/Analytics.tsx",
-        "trackingIds": [
-          "GTM-TNZ4GVW2"
-        ]
-      }
     }
   ],
   "seo": {
