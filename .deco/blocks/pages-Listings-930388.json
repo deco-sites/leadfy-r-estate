@@ -51,6 +51,12 @@
       "section": {
         "__resolveType": "site/sections/GlobalTags.tsx"
       }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "GTM-Privia"
+      }
     }
   ],
   "seo": {
