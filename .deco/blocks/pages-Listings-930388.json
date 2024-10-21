@@ -55,7 +55,8 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "GTM-Privia"
+        "__resolveType": "site/sections/GTMSection.tsx",
+        "gtmId": "GTM-TNZ4GVW2"
       }
     }
   ],
