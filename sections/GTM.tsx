@@ -1,10 +1,7 @@
-interface Props {
-  /**
-  * @description The description of name.
-  */
-  name?: string;
+import Analytics, { Props } from "../../components/Analytics.tsx";
+
+function Section(props: Props) {
+  return <Analytics {...props} />;
 }
 
-export default function Section({ name = "Capy" }: Props) {
-  return <div>Hello {name}</div>
-}
+export default Section;
