@@ -53,10 +53,11 @@
       }
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "GTM-Privia"
-      }
+      "__resolveType": "website/sections/Analytics/Analytics.tsx",
+      "trackingIds": [
+        "GTM-TNZ4GVW2"
+      ],
+      "googleAnalyticsIds": []
     }
   ],
   "seo": {
