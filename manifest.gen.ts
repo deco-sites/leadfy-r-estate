@@ -26,6 +26,7 @@ import * as $$$$$$13 from "./sections/HeroBanner.tsx";
 import * as $$$$$$14 from "./sections/HeroProductPage.tsx";
 import * as $$$$$$15 from "./sections/ImageWithParagraph.tsx";
 import * as $$$$$$16 from "./sections/Logos.tsx";
+import * as $$$$$$29 from "./sections/meta-tag.tsx";
 import * as $$$$$$17 from "./sections/PropertyBuyOption.tsx";
 import * as $$$$$$18 from "./sections/PropertyDescription.tsx";
 import * as $$$$$$19 from "./sections/PropertyLocation.tsx";
@@ -61,6 +62,7 @@ const manifest = {
     "site/sections/HeroProductPage.tsx": $$$$$$14,
     "site/sections/ImageWithParagraph.tsx": $$$$$$15,
     "site/sections/Logos.tsx": $$$$$$16,
+    "site/sections/meta-tag.tsx": $$$$$$29,
     "site/sections/PropertyBuyOption.tsx": $$$$$$17,
     "site/sections/PropertyDescription.tsx": $$$$$$18,
     "site/sections/PropertyLocation.tsx": $$$$$$19,
