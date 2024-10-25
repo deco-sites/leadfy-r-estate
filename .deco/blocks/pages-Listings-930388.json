@@ -47,9 +47,7 @@
       }
     },
     {
-      "__resolveType": "site/sections/GlobalTags.tsx",
-      "googleKey": "id8Sr-ydqRUhwOkXbEFVt1INnRiMKG4HQpjVg1dE3vM",
-      "facebookKey": "tuh0zjh8d3kecv0e11z6fyqzwzvkg7"
+      "__resolveType": "global-tags-privia"
     },
     {
       "__resolveType": "website/sections/Analytics/Analytics.tsx",

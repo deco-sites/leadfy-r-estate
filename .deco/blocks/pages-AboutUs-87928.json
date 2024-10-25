@@ -55,6 +55,12 @@
         "GTM-TNZ4GVW2"
       ],
       "googleAnalyticsIds": []
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "global-tags-privia"
+      }
     }
   ],
   "seo": {
