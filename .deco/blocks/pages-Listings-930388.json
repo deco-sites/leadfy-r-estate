@@ -33,7 +33,7 @@
         }
       },
       "showPriceText": true,
-      "priceText": "Starts at",
+      "priceText": "Starting From",
       "priceTextColor": "#f1efef"
     },
     {
