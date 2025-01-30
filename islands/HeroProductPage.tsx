@@ -83,13 +83,6 @@ function GalleryProductPage({ images }: { images: string[] }) {
             index={index}
             class="carousel-item w-full flex items-center"
           >
-            <ZoomImage>
-              <img
-                class="w-full h-max"
-                src={image}
-                width={650}
-                />
-            </ZoomImage>
           </Slider.Item>
         ))}
       </Slider>
