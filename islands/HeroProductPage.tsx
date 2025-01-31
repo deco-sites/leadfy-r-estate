@@ -77,7 +77,7 @@ function GalleryProductPage({ images }: { images: string[] }) {
       id={id}
       class="grid grid-cols-[48px_1fr_48px] sm:grid-cols-[120px_1fr_120px] grid-rows-[1fr_48px_1fr_64px] relative"
     >
-      <Slider class="carousel carousel-center w-full col-span-full row-span-full gap-2 max-w-[650px] max-h-[280px] lg:max-h-[450px] overflow-hidden">
+      <Slider class="carousel carousel-center w-full col-span-full row-span-full gap-2 max-w-[650px] overflow-hidden">
         {images?.map((image, index) => (
           <Slider.Item
             index={index}
