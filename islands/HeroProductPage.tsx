@@ -16,52 +16,42 @@ export interface Props {
 
 const HeroProductPage = ({ showPriceText, priceText, storeId, propertiesList = [] }: Props) => {
   const currentSlug = window?.location?.pathname?.split("/")[2];
-  const property = propertiesList.find(prop => prop?.slug === currentSlug);
+  const property = propertiesList.find((prop) => prop?.slug === currentSlug);
   const id = useId();
 
   return (
-    <div className="container mt-20 md:mt-28 mx-auto px-4 py-8 md:py-16">
-      {/* Cabeçalho */}
-      <div className="mb-8 md:mb-12 text-center">
-        <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-2">EXP</h1>
-        <h2 className="text-xl md:text-3xl text-privia-passion font-semibold">
-          Executive Townhome at Mirada Lagoon - Capri
-        </h2>
-      </div>
+    <div className="container mt-28 mx-auto px-4 py-16 lg:px-0">
+      <div id={id} className="flex flex-col md:flex-row justify-between space-y-4 md:space-y-0 md:space-x-4 lg:px-[5%]">
+        {/* Galeria de imagens */}
+        <GalleryProductPage images={property?.images || []} />
 
-      <div id={id} className="flex flex-col md:flex-row gap-8 lg:px-[5%]">
-        {/* Galeria */}
-        <div className="w-full md:w-2/3">
-          <GalleryProductPage images={property?.images || []} />
-        </div>
-
-        {/* Formulário */}
-        <div className="w-full md:w-1/3">
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-bold mb-6">Get in Touch</h3>
-            <FormProductPage storeId={storeId} />
-          </div>
+        {/* Formulário ao lado da galeria */}
+        <div className="hidden md:block w-full md:w-1/3">
+          <FormProductPage storeId={storeId} />
         </div>
       </div>
 
-      {/* Detalhes */}
-      <div className="mt-8 md:mt-12 lg:px-[5%]">
-        <div className="bg-gray-50 p-6 rounded-lg">
-          <h3 className="text-2xl font-bold text-privia-passion mb-4">TOWNHOMES AT MIRADA</h3>
-          <p className="text-lg text-gray-600 mb-4">Lagoon-Hampton | Ready</p>
-          
-          <div className="flex flex-wrap gap-4 text-sm md:text-base">
-            <div className="bg-white px-4 py-2 rounded-md shadow-sm">
-              {property?.rooms} Bedrooms
-            </div>
-            <div className="bg-white px-4 py-2 rounded-md shadow-sm">
-              {property?.bathrooms} Full Baths
-            </div>
-            <div className="bg-white px-4 py-2 rounded-md shadow-sm">
-              {property?.areaSize} Ft²
-            </div>
-          </div>
-        </div>
+      {/* Formulário abaixo da galeria em telas pequenas */}
+      <div className="md:hidden block mt-9">
+        <FormProductPage storeId={storeId} />
+      </div>
+
+      {/* Detalhes do Produto */}
+      <div className="container mt-8 lg:px-[5%]">
+        <h2 className="text-[32px] font-extrabold text-privia-passion">{property?.title}</h2>
+        {showPriceText && <span className="w-[150px] text-xs">{priceText}</span>}
+        <p className="text-2xl mt-2 text-[#787878] font-extrabold">{property?.price}</p>
+      </div>
+
+      <div className="container flex flex-col md:flex-row gap-4 w-full mt-4 lg:px-[5%]">
+        <ul className="flex flex-row items-center gap-4 text-xs text-[#787878]">
+          <li>{property?.rooms} BEDROOMS</li>
+          <li>&bull; {property?.bathrooms} FULL BATHS</li>
+          <li>&bull; {property?.areaSize} Ft</li>
+          {property?.label && (
+            <li className="bg-privia-prestige text-privia-passion py-1 px-2 rounded">{property?.label}</li>
+          )}
+        </ul>
       </div>
     </div>
   );
@@ -71,57 +61,72 @@ function GalleryProductPage({ images }: { images: string[] }) {
   const id = useId();
 
   return (
-    <div id={id} className="relative group">
-      <Slider className="carousel carousel-center gap-6 w-full overflow-x-auto snap-x md:snap-none">
+    <div id={id} className="w-full relative flex justify-center">
+      {/* Slider principal */}
+      <Slider className="carousel carousel-center w-full overflow-hidden border-none">
         {images.map((image, index) => (
           <Slider.Item
             key={index}
             index={index}
-            className="carousel-item w-full snap-start"
+            className="carousel-item flex items-center justify-center border-none"
           >
-            <div className="relative aspect-video w-full">
-              <ZoomImage>
-                <img
-                  className="w-full h-full object-cover rounded-xl"
-                  src={image}
-                  alt={`Property view ${index + 1}`}
-                  loading="lazy"
-                  decoding="async"
-                />
-              </ZoomImage>
-            </div>
+            <ZoomImage>
+              <img
+                className="w-full h-auto min-h-[300px] max-h-[90vh] md:max-h-[500px] object-contain border-none"
+                src={image}
+                alt={`Imagem ${index + 1}`}
+              />
+            </ZoomImage>
           </Slider.Item>
         ))}
       </Slider>
 
-      {/* Controles */}
-      {images.length > 1 && (
-        <>
-          <div className="absolute left-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
-            <Slider.PrevButton className="btn btn-circle bg-white/90 hover:bg-white">
-              <Icon size={24} id="ChevronLeft" />
-            </Slider.PrevButton>
-          </div>
-          
-          <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
-            <Slider.NextButton className="btn btn-circle bg-white/90 hover:bg-white">
-              <Icon size={24} id="ChevronRight" />
-            </Slider.NextButton>
-          </div>
+      {/* Botões de navegação */}
+      {images.length > 1 && <Buttons />}
 
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-            {images.map((_, index) => (
-              <Slider.Dot
-                index={index}
-                className="w-3 h-3 rounded-full bg-white/50 border-none transition-all"
-              />
-            ))}
-          </div>
-        </>
-      )}
-
+      {/* Controles do Slider */}
       <SliderJS rootId={id} infinite />
     </div>
+  );
+}
+
+function Dots({ images }: { images: string[] }) {
+  return (
+    <ul className="carousel justify-center col-span-full gap-2 z-10 pt-5">
+      {images.map((image, index) => (
+        <li key={index} className="carousel-item">
+          <Slider.Dot index={index}>
+            <div className="w-20 h-20 py-5 border-[1px] border-none flex justify-center items-center opacity-40 group-disabled:opacity-100">
+              <Image
+                className="w-full h-max border-none"
+                src={image}
+                width={120}
+              />
+            </div>
+          </Slider.Dot>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function Buttons() {
+  return (
+    <>
+      {/* Botão Anterior */}
+      <div className="flex items-center justify-center z-10 absolute left-0 top-[50%] transform -translate-y-1/2">
+        <Slider.PrevButton>
+          <Icon className="text-white" size={26} id="ChevronLeft" strokeWidth={5} />
+        </Slider.PrevButton>
+      </div>
+
+      {/* Botão Próximo */}
+      <div className="flex items-center justify-center z-10 absolute right-0 top-[50%] transform -translate-y-1/2">
+        <Slider.NextButton>
+          <Icon className="text-white" size={26} id="ChevronRight" strokeWidth={5} />
+        </Slider.NextButton>
+      </div>
+    </>
   );
 }
 
