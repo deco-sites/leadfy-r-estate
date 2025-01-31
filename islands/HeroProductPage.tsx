@@ -76,7 +76,7 @@ function GalleryProductPage({ images }: { images: string[] }) {
           >
             <ZoomImage>
               <img
-                className="w-full h-auto max-h-[500px] object-cover rounded-lg"
+                className="w-full h-auto max-h-[500px] object-cover"
                 src={image}
                 width={width}
                 height={height}
