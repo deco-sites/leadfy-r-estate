@@ -66,7 +66,7 @@ function GalleryProductPage({ images }: { images: string[] }) {
   const height = 764;
 
   return (
-    <div id={id} className="w-full md:w-2/3 max-w-[1000px] relative flex justify-center">
+    <div id={id} className="w-full relative flex justify-center">
       <Slider className="carousel carousel-center w-full overflow-hidden border-none">
         {images.map((image, index) => (
           <Slider.Item
@@ -76,7 +76,7 @@ function GalleryProductPage({ images }: { images: string[] }) {
           >
             <ZoomImage>
               <img
-                className="w-full h-auto max-h-[90vh] md:max-h-[500px] object-contain border-none"
+                className="w-full h-auto min-h-[300px] max-h-[90vh] md:max-h-[500px] object-contain border-none"
                 src={image}
                 width={width}
                 height={height}
