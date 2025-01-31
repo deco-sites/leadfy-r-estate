@@ -68,8 +68,8 @@ const HeroProductPage = ({showPriceText, priceText, storeId, propertiesList = []
 
 function GalleryProductPage({ images }: { images: string[] }) {
   const id = useId();
-  const width = 1568;
-  const height = 764;
+  const width = 784;
+  const height = 382;
   const aspectRatio = `${width} / ${height}`;
 
   return (
