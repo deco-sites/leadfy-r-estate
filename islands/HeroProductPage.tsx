@@ -20,24 +20,26 @@ const HeroProductPage = ({ showPriceText, priceText, storeId, propertiesList = [
   const id = useId();
 
   return (
-    <div className="container mt-28 mx-auto px-4 py-16 lg:px-0">
-      <div id={id} className="flex flex-col md:flex-row justify-between space-y-4 md:space-y-0 md:space-x-4 lg:px-[5%]">
-        {/* Galeria de imagens */}
-        <GalleryProductPage images={property?.images || []} />
+    <div className="container mx-auto px-4 md:py-16 py-8 lg:px-0 md:mt-28 mt-20">
+      <div id={id} className="flex flex-col md:flex-row justify-between md:space-x-4 lg:px-[5%]">
+        {/* Galeria com ajuste mobile */}
+        <div className="w-full md:-mt-0 -mt-4">
+          <GalleryProductPage images={property?.images || []} />
+        </div>
 
-        {/* Formulário ao lado da galeria */}
+        {/* Formulário desktop */}
         <div className="hidden md:block w-full md:w-1/3">
           <FormProductPage storeId={storeId} />
         </div>
       </div>
 
-      {/* Formulário abaixo da galeria em telas pequenas */}
-      <div className="md:hidden block mt-9">
+      {/* Formulário mobile */}
+      <div className="md:hidden block mt-6">
         <FormProductPage storeId={storeId} />
       </div>
 
       {/* Detalhes do Produto */}
-      <div className="container mt-8 lg:px-[5%]">
+      <div className="container mt-6 lg:px-[5%]">
         <h2 className="text-[24px] md:text-[32px] font-extrabold text-privia-passion">{property?.title}</h2>
         {showPriceText && <span className="w-[150px] text-xs">{priceText}</span>}
         <p className="text-xl md:text-2xl mt-2 text-[#787878] font-extrabold">{property?.price}</p>
@@ -59,11 +61,10 @@ const HeroProductPage = ({ showPriceText, priceText, storeId, propertiesList = [
 
 function GalleryProductPage({ images }: { images: string[] }) {
   const id = useId();
-  const aspectRatio = 764 / 1586; // Calculado a partir das dimensões originais (height/width)
+  const aspectRatio = 764 / 1586;
 
   return (
     <div id={id} className="w-full relative flex justify-center">
-      {/* Slider principal com ajuste de aspect ratio */}
       <Slider className="carousel carousel-center w-full overflow-hidden border-none">
         {images.map((image, index) => (
           <Slider.Item
@@ -75,8 +76,8 @@ function GalleryProductPage({ images }: { images: string[] }) {
               <div 
                 className="w-full relative" 
                 style={{
-                  height: `calc(100vw * ${aspectRatio})`, // Mantém o aspect ratio original no mobile
-                  maxHeight: '70vh' // Limite máximo para desktop
+                  height: `calc(95vw * ${aspectRatio})`, // Ajuste mobile
+                  maxHeight: '70vh' // Mantém desktop
                 }}
               >
                 <img
@@ -85,7 +86,6 @@ function GalleryProductPage({ images }: { images: string[] }) {
                   alt={`Imagem ${index + 1}`}
                   loading={index === 0 ? "eager" : "lazy"}
                   decoding="async"
-                  draggable={false}
                 />
               </div>
             </ZoomImage>
@@ -93,39 +93,33 @@ function GalleryProductPage({ images }: { images: string[] }) {
         ))}
       </Slider>
 
-      {/* Botões de navegação */}
-      {images.length > 1 && <Buttons />}
+      {images.length > 1 && (
+        <>
+          <div className="flex items-center justify-center z-10 absolute left-2 md:left-0 top-[50%] transform -translate-y-1/2">
+            <Slider.PrevButton className="p-2">
+              <Icon
+                className="text-white bg-black/30 rounded-full p-1"
+                size={34}
+                id="ChevronLeft"
+                strokeWidth={3}
+              />
+            </Slider.PrevButton>
+          </div>
+          <div className="flex items-center justify-center z-10 absolute right-2 md:right-0 top-[50%] transform -translate-y-1/2">
+            <Slider.NextButton className="p-2">
+              <Icon
+                className="text-white bg-black/30 rounded-full p-1"
+                size={34}
+                id="ChevronRight"
+                strokeWidth={3}
+              />
+            </Slider.NextButton>
+          </div>
+        </>
+      )}
 
-      {/* Controles do Slider */}
       <SliderJS rootId={id} infinite />
     </div>
-  );
-}
-
-function Buttons() {
-  return (
-    <>
-      <div className="flex items-center justify-center z-10 absolute left-2 md:left-0 top-[50%] transform -translate-y-1/2">
-        <Slider.PrevButton className="p-2">
-          <Icon
-            className="text-white bg-black/30 rounded-full p-1"
-            size={34}
-            id="ChevronLeft"
-            strokeWidth={3}
-          />
-        </Slider.PrevButton>
-      </div>
-      <div className="flex items-center justify-center z-10 absolute right-2 md:right-0 top-[50%] transform -translate-y-1/2">
-        <Slider.NextButton className="p-2">
-          <Icon
-            className="text-white bg-black/30 rounded-full p-1"
-            size={34}
-            id="ChevronRight"
-            strokeWidth={3}
-          />
-        </Slider.NextButton>
-      </div>
-    </>
   );
 }
 
