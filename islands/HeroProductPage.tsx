@@ -22,7 +22,7 @@ const HeroProductPage = ({ showPriceText, priceText, storeId, propertiesList = [
   return (
     <div className="container mt-28 mx-auto px-4 py-16 lg:px-0">
       <div id={id} className="flex flex-col md:flex-row justify-between space-y-4 md:space-y-0 md:space-x-4 lg:px-[5%]">
-        {/* Galeria de imagens */}
+        {/* Galeria de imagens com otimizações mobile */}
         <GalleryProductPage images={property?.images || []} />
 
         {/* Formulário ao lado da galeria */}
@@ -62,26 +62,29 @@ function GalleryProductPage({ images }: { images: string[] }) {
 
   return (
     <div id={id} className="w-full relative flex justify-center">
-      {/* Slider principal */}
-      <Slider className="carousel carousel-center w-full overflow-hidden border-none">
+      {/* Slider principal com otimizações touch */}
+      <Slider className="carousel carousel-center w-full overflow-hidden border-none touch-pan-y">
         {images.map((image, index) => (
           <Slider.Item
             key={index}
             index={index}
-            className="carousel-item flex items-center justify-center border-none"
+            className="carousel-item flex items-center justify-center border-none w-full"
           >
             <ZoomImage>
               <img
-                className="w-full h-auto min-h-[300px] max-h-[70vh] object-contain border-none"
+                className="w-full h-auto min-h-[200px] md:min-h-[300px] max-h-[70vh] object-contain border-none"
                 src={image}
                 alt={`Imagem ${index + 1}`}
+                loading={index === 0 ? "eager" : "lazy"}
+                decoding="async"
+                draggable={false}
               />
             </ZoomImage>
           </Slider.Item>
         ))}
       </Slider>
 
-      {/* Botões de navegação */}
+      {/* Botões de navegação otimizados para mobile */}
       {images.length > 1 && <Buttons />}
 
       {/* Controles do Slider */}
@@ -93,17 +96,24 @@ function GalleryProductPage({ images }: { images: string[] }) {
 function Buttons() {
   return (
     <>
-      {/* Botão Anterior */}
-      <div className="flex items-center justify-center z-10 absolute left-0 top-[50%] transform -translate-y-1/2">
-        <Slider.PrevButton>
-          <Icon className="text-white" size={26} id="ChevronLeft" strokeWidth={5} />
+      <div className="flex items-center justify-center z-10 absolute left-2 md:left-0 top-[50%] transform -translate-y-1/2">
+        <Slider.PrevButton className="p-2 touch-manipulation">
+          <Icon
+            className="text-white bg-black/30 rounded-full p-1"
+            size={34}
+            id="ChevronLeft"
+            strokeWidth={3}
+          />
         </Slider.PrevButton>
       </div>
-
-      {/* Botão Próximo */}
-      <div className="flex items-center justify-center z-10 absolute right-0 top-[50%] transform -translate-y-1/2">
-        <Slider.NextButton>
-          <Icon className="text-white" size={26} id="ChevronRight" strokeWidth={5} />
+      <div className="flex items-center justify-center z-10 absolute right-2 md:right-0 top-[50%] transform -translate-y-1/2">
+        <Slider.NextButton className="p-2 touch-manipulation">
+          <Icon
+            className="text-white bg-black/30 rounded-full p-1"
+            size={34}
+            id="ChevronRight"
+            strokeWidth={3}
+          />
         </Slider.NextButton>
       </div>
     </>
