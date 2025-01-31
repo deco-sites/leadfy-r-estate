@@ -67,16 +67,16 @@ function GalleryProductPage({ images }: { images: string[] }) {
 
   return (
     <div id={id} className="w-full md:w-2/3 max-w-[1000px] relative">
-      <Slider className="carousel carousel-center w-full overflow-hidden rounded-lg">
+      <Slider className="carousel carousel-center w-full overflow-hidden border-none">
         {images.map((image, index) => (
           <Slider.Item
             key={index}
             index={index}
-            className="carousel-item flex items-center justify-center"
+            className="carousel-item flex items-center justify-center border-none"
           >
             <ZoomImage>
               <img
-                className="w-full h-auto max-h-[500px] object-cover"
+                className="w-full h-auto md:max-h-[500px] max-h-[75vh] object-contain border-none"
                 src={image}
                 width={width}
                 height={height}
@@ -104,7 +104,7 @@ function Dots({ images }: { images: string[] }) {
           <Slider.Dot index={index}>
             <div className="w-20 h-20 py-5 border-[1px] border-none flex justify-center items-center opacity-40 group-disabled:opacity-100">
               <Image
-                className="w-full h-max"
+                className="w-full h-max border-none"
                 src={image}
                 width={120}
               />
