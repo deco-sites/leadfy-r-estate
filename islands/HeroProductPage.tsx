@@ -22,7 +22,7 @@ const HeroProductPage = ({ showPriceText, priceText, storeId, propertiesList = [
   return (
     <div className="container mt-28 mx-auto px-4 py-16 lg:px-0">
       <div id={id} className="flex flex-col md:flex-row justify-between space-y-4 md:space-y-0 md:space-x-4 lg:px-[5%]">
-        {/* Galeria de imagens com otimizações mobile */}
+        {/* Galeria de imagens */}
         <GalleryProductPage images={property?.images || []} />
 
         {/* Formulário ao lado da galeria */}
@@ -59,11 +59,12 @@ const HeroProductPage = ({ showPriceText, priceText, storeId, propertiesList = [
 
 function GalleryProductPage({ images }: { images: string[] }) {
   const id = useId();
+  const aspectRatio = 764 / 1586; // Calculado a partir das dimensões originais (height/width)
 
   return (
     <div id={id} className="w-full relative flex justify-center">
-      {/* Slider principal com otimizações touch */}
-      <Slider className="carousel carousel-center w-full overflow-hidden border-none touch-pan-y">
+      {/* Slider principal com ajuste de aspect ratio */}
+      <Slider className="carousel carousel-center w-full overflow-hidden border-none">
         {images.map((image, index) => (
           <Slider.Item
             key={index}
@@ -71,20 +72,28 @@ function GalleryProductPage({ images }: { images: string[] }) {
             className="carousel-item flex items-center justify-center border-none w-full"
           >
             <ZoomImage>
-              <img
-                className="w-full h-auto min-h-[200px] md:min-h-[300px] max-h-[70vh] object-contain border-none"
-                src={image}
-                alt={`Imagem ${index + 1}`}
-                loading={index === 0 ? "eager" : "lazy"}
-                decoding="async"
-                draggable={false}
-              />
+              <div 
+                className="w-full relative" 
+                style={{
+                  height: `calc(100vw * ${aspectRatio})`, // Mantém o aspect ratio original no mobile
+                  maxHeight: '70vh' // Limite máximo para desktop
+                }}
+              >
+                <img
+                  className="w-full h-full absolute top-0 left-0 object-contain border-none"
+                  src={image}
+                  alt={`Imagem ${index + 1}`}
+                  loading={index === 0 ? "eager" : "lazy"}
+                  decoding="async"
+                  draggable={false}
+                />
+              </div>
             </ZoomImage>
           </Slider.Item>
         ))}
       </Slider>
 
-      {/* Botões de navegação otimizados para mobile */}
+      {/* Botões de navegação */}
       {images.length > 1 && <Buttons />}
 
       {/* Controles do Slider */}
@@ -97,7 +106,7 @@ function Buttons() {
   return (
     <>
       <div className="flex items-center justify-center z-10 absolute left-2 md:left-0 top-[50%] transform -translate-y-1/2">
-        <Slider.PrevButton className="p-2 touch-manipulation">
+        <Slider.PrevButton className="p-2">
           <Icon
             className="text-white bg-black/30 rounded-full p-1"
             size={34}
@@ -107,7 +116,7 @@ function Buttons() {
         </Slider.PrevButton>
       </div>
       <div className="flex items-center justify-center z-10 absolute right-2 md:right-0 top-[50%] transform -translate-y-1/2">
-        <Slider.NextButton className="p-2 touch-manipulation">
+        <Slider.NextButton className="p-2">
           <Icon
             className="text-white bg-black/30 rounded-full p-1"
             size={34}
