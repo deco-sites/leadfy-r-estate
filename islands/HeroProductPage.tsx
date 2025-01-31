@@ -8,7 +8,7 @@ import Image from "apps/website/components/Image.tsx";
 import type { PropertiesList } from "../loaders/propertiesData.ts";
 
 export interface Props {
-  propertiesList?: PropertiesList;  
+  propertiesList?: PropertiesList;
   showPriceText?: boolean;
   priceText?: string;
   storeId?: string;
@@ -20,39 +20,47 @@ const HeroProductPage = ({ showPriceText, priceText, storeId, propertiesList = [
   const id = useId();
 
   return (
-    <div className="container mt-28 mx-auto px-4 py-16 lg:px-0">
-      <div id={id} className="flex flex-col md:flex-row justify-between space-x-4 lg:px-[5%]">
+    <div className="container mt-16 md:mt-28 mx-auto px-4 py-8 md:py-16 lg:px-0">
+      <div id={id} className="flex flex-col md:flex-row justify-between md:space-x-4 lg:px-[5%]">
         
         {/* Galeria de imagens */}
         <GalleryProductPage images={property?.images || []} />
 
         {/* Formulário ao lado da galeria */}
-        <div className="hidden md:block w-1/3">
+        <div className="hidden md:block md:w-1/3 lg:pl-8">
           <FormProductPage storeId={storeId} />
         </div>
       </div>
 
       {/* Detalhes do Produto */}
-      <div className="container mt-8 lg:px-[5%]">
-        <h2 className="text-[32px] font-extrabold text-privia-passion">{property?.title}</h2>
+      <div className="container mt-6 md:mt-8 lg:px-[5%]">
+        <h2 className="text-2xl md:text-[32px] font-extrabold text-privia-passion">
+          {property?.title}
+        </h2>
         {showPriceText && (
-          <span className="w-[150px] text-xs">{priceText}</span>
+          <span className="block mt-2 md:mt-0 text-xs md:text-sm">{priceText}</span>
         )}
-        <p className="text-2xl mt-2 text-[#787878] font-extrabold">{property?.price}</p>
+        <p className="text-xl md:text-2xl mt-2 text-[#787878] font-extrabold">
+          {property?.price}
+        </p>
       </div>
 
       <div className="container flex flex-col md:flex-row gap-4 w-full mt-4 lg:px-[5%]">
-        <ul className="flex flex-row items-center gap-4 text-xs text-[#787878]">
+        <ul className="flex flex-wrap items-center gap-2 md:gap-4 text-sm md:text-xs text-[#787878]">
           <li>{property?.rooms} BEDROOMS</li>
-          <li>&bull; {property?.bathrooms} FULL BATHS</li>
-          <li>&bull; {property?.areaSize} Ft</li>
+          <li className="hidden md:block">&bull;</li>
+          <li>{property?.bathrooms} FULL BATHS</li>
+          <li className="hidden md:block">&bull;</li>
+          <li>{property?.areaSize} Ft</li>
           {property?.label && (
-            <li className="bg-privia-prestige text-privia-passion py-1 px-2 rounded">{property?.label}</li>
+            <li className="w-full md:w-auto mt-2 md:mt-0 bg-privia-prestige text-privia-passion py-1 px-2 rounded text-sm">
+              {property?.label}
+            </li>
           )}
         </ul>
 
         {/* Formulário abaixo da galeria em telas pequenas */}
-        <div className="md:hidden block mt-9">
+        <div className="md:hidden block mt-6 w-full">
           <FormProductPage storeId={storeId} />
         </div>
       </div>
@@ -76,11 +84,13 @@ function GalleryProductPage({ images }: { images: string[] }) {
           >
             <ZoomImage>
               <img
-                className="w-full h-auto min-h-[300px] max-h-[90vh] md:max-h-[500px] object-contain border-none"
+                className="w-full h-auto min-h-[350px] max-h-[70vh] md:max-h-[500px] object-contain border-none"
                 src={image}
                 width={width}
                 height={height}
                 alt={`Imagem ${index + 1}`}
+                loading={index === 0 ? "eager" : "lazy"}
+                decoding={index === 0 ? "auto" : "async"}
               />
             </ZoomImage>
           </Slider.Item>
@@ -98,11 +108,11 @@ function GalleryProductPage({ images }: { images: string[] }) {
 
 function Dots({ images }: { images: string[] }) {
   return (
-    <ul className="carousel justify-center col-span-full gap-2 z-10 pt-5">
+    <ul className="carousel justify-center col-span-full gap-2 z-10 pt-5 overflow-x-auto">
       {images.map((image, index) => (
         <li key={index} className="carousel-item">
           <Slider.Dot index={index}>
-            <div className="w-20 h-20 py-5 border-[1px] border-none flex justify-center items-center opacity-40 group-disabled:opacity-100">
+            <div className="w-16 h-16 md:w-20 md:h-20 py-4 md:py-5 border-[1px] border-none flex justify-center items-center opacity-40 group-disabled:opacity-100">
               <Image
                 className="w-full h-max border-none"
                 src={image}
@@ -119,14 +129,14 @@ function Dots({ images }: { images: string[] }) {
 function Buttons() {
   return (
     <>
-      <div className="flex items-center justify-center z-10 absolute left-0 top-[50%] transform -translate-y-1/2">
-        <Slider.PrevButton>
-          <Icon className="text-white" size={26} id="ChevronLeft" strokeWidth={5} />
+      <div className="flex items-center justify-center z-10 absolute left-2 md:left-0 top-[50%] transform -translate-y-1/2">
+        <Slider.PrevButton className="bg-black/30 rounded-full p-2 md:p-3">
+          <Icon className="text-white" size={24} id="ChevronLeft" strokeWidth={5} />
         </Slider.PrevButton>
       </div>
-      <div className="flex items-center justify-center z-10 absolute right-0 top-[50%] transform -translate-y-1/2">
-        <Slider.NextButton>
-          <Icon className="text-white" size={26} id="ChevronRight" strokeWidth={5} />
+      <div className="flex items-center justify-center z-10 absolute right-2 md:right-0 top-[50%] transform -translate-y-1/2">
+        <Slider.NextButton className="bg-black/30 rounded-full p-2 md:p-3">
+          <Icon className="text-white" size={24} id="ChevronRight" strokeWidth={5} />
         </Slider.NextButton>
       </div>
     </>
