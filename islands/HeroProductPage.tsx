@@ -1,3 +1,4 @@
+// HeroProductPage.tsx
 import Icon from "../components/ui/Icon.tsx";
 import Slider from "../components/ui/Slider.tsx";
 import SliderJS from "./SliderJS.tsx";
@@ -20,123 +21,135 @@ const HeroProductPage = ({ showPriceText, priceText, storeId, propertiesList = [
   const id = useId();
 
   return (
-    <div className="container mt-16 md:mt-28 mx-auto px-4 py-8 md:py-16 lg:px-0">
+    <div className="container mt-12 md:mt-28 mx-auto px-4 py-6 md:py-16 lg:px-0">
+      {/* Header com Logo */}
+      <div className="flex items-center gap-3 mb-8 md:mb-12 lg:px-[5%]">
+        <Image
+          src="/imgs/exp-logo.jpg" // Substituir pelo caminho correto
+          width={80}
+          height={40}
+          alt="eXp Realty"
+          className="w-20 h-auto"
+        />
+        <div className="flex flex-col">
+          <h1 className="text-xl font-bold text-gray-800">TOWNHOMES AT MIRADA</h1>
+          <p className="text-sm text-gray-600">Lagoon-Hampton</p>
+        </div>
+      </div>
+
       <div id={id} className="flex flex-col md:flex-row justify-between md:space-x-4 lg:px-[5%]">
-        
         {/* Galeria de imagens */}
         <GalleryProductPage images={property?.images || []} />
 
-        {/* Formulário ao lado da galeria */}
+        {/* Formulário desktop */}
         <div className="hidden md:block md:w-1/3 lg:pl-8">
+          <div className="sticky top-24">
+            <h2 className="text-2xl font-bold mb-6">Executive Townhome at Mirada Lagoon - Capri</h2>
+            <FormProductPage storeId={storeId} />
+          </div>
+        </div>
+      </div>
+
+      {/* Detalhes do Produto Mobile */}
+      <div className="md:hidden container mt-6">
+        <h2 className="text-2xl font-bold text-privia-passion mb-4">
+          Executive Townhome at Mirada Lagoon - Capri
+        </h2>
+        {showPriceText && (
+          <span className="block text-sm text-gray-600 mb-2">{priceText}</span>
+        )}
+        <p className="text-xl text-[#787878] font-bold">{property?.price}</p>
+        
+        <div className="mt-6 w-full">
           <FormProductPage storeId={storeId} />
         </div>
       </div>
 
-      {/* Detalhes do Produto */}
-      <div className="container mt-6 md:mt-8 lg:px-[5%]">
-        <h2 className="text-2xl md:text-[32px] font-extrabold text-privia-passion">
-          {property?.title}
-        </h2>
+      {/* Detalhes do Produto Desktop */}
+      <div className="hidden md:block container mt-8 lg:px-[5%]">
+        <h2 className="text-[32px] font-extrabold text-privia-passion">{property?.title}</h2>
         {showPriceText && (
-          <span className="block mt-2 md:mt-0 text-xs md:text-sm">{priceText}</span>
+          <span className="block mt-2 text-sm">{priceText}</span>
         )}
-        <p className="text-xl md:text-2xl mt-2 text-[#787878] font-extrabold">
-          {property?.price}
-        </p>
+        <p className="text-2xl mt-2 text-[#787878] font-extrabold">{property?.price}</p>
       </div>
 
-      <div className="container flex flex-col md:flex-row gap-4 w-full mt-4 lg:px-[5%]">
-        <ul className="flex flex-wrap items-center gap-2 md:gap-4 text-sm md:text-xs text-[#787878]">
-          <li>{property?.rooms} BEDROOMS</li>
-          <li className="hidden md:block">&bull;</li>
-          <li>{property?.bathrooms} FULL BATHS</li>
-          <li className="hidden md:block">&bull;</li>
-          <li>{property?.areaSize} Ft</li>
+      {/* Especificações */}
+      <div className="container flex flex-col md:flex-row gap-4 w-full mt-6 lg:px-[5%]">
+        <ul className="flex flex-wrap items-center gap-3 text-sm md:text-xs text-[#787878]">
+          <li className="bg-gray-100 px-3 py-1 rounded">{property?.rooms} Bedrooms</li>
+          <li className="bg-gray-100 px-3 py-1 rounded">{property?.bathrooms} Full Baths</li>
+          <li className="bg-gray-100 px-3 py-1 rounded">{property?.areaSize} Ft²</li>
           {property?.label && (
-            <li className="w-full md:w-auto mt-2 md:mt-0 bg-privia-prestige text-privia-passion py-1 px-2 rounded text-sm">
+            <li className="bg-privia-prestige text-privia-passion py-1 px-3 rounded">
               {property?.label}
             </li>
           )}
         </ul>
-
-        {/* Formulário abaixo da galeria em telas pequenas */}
-        <div className="md:hidden block mt-6 w-full">
-          <FormProductPage storeId={storeId} />
-        </div>
       </div>
     </div>
   );
 };
 
+// GalleryProductPage.tsx
 function GalleryProductPage({ images }: { images: string[] }) {
   const id = useId();
-  const width = 1586;
-  const height = 764;
 
   return (
-    <div id={id} className="w-full relative flex justify-center">
-      <Slider className="carousel carousel-center w-full overflow-hidden border-none">
+    <div id={id} className="w-full relative">
+      <Slider className="carousel carousel-center w-full overflow-hidden rounded-xl">
         {images.map((image, index) => (
           <Slider.Item
             key={index}
             index={index}
-            className="carousel-item flex items-center justify-center border-none"
+            className="carousel-item relative w-full"
           >
             <ZoomImage>
-              <img
-                className="w-full h-auto min-h-[350px] max-h-[70vh] md:max-h-[500px] object-contain border-none"
-                src={image}
-                width={width}
-                height={height}
-                alt={`Imagem ${index + 1}`}
-                loading={index === 0 ? "eager" : "lazy"}
-                decoding={index === 0 ? "auto" : "async"}
-              />
+              <div className="aspect-video w-full">
+                <img
+                  className="w-full h-full object-cover"
+                  src={image}
+                  alt={`Imagem ${index + 1}`}
+                  loading={index === 0 ? "eager" : "lazy"}
+                  decoding={index === 0 ? "auto" : "async"}
+                />
+              </div>
             </ZoomImage>
           </Slider.Item>
         ))}
       </Slider>
 
-      {/* Botões de Navegação */}
-      {images.length > 1 && <Buttons />}
+      {images.length > 1 && (
+        <>
+          <Buttons />
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+            {images.map((_, index) => (
+              <Slider.Dot
+                index={index}
+                className="w-3 h-3 rounded-full bg-white/50 border-none transition-all"
+              />
+            ))}
+          </div>
+        </>
+      )}
 
-      {/* Controles do Slider */}
       <SliderJS rootId={id} infinite />
     </div>
   );
 }
 
-function Dots({ images }: { images: string[] }) {
-  return (
-    <ul className="carousel justify-center col-span-full gap-2 z-10 pt-5 overflow-x-auto">
-      {images.map((image, index) => (
-        <li key={index} className="carousel-item">
-          <Slider.Dot index={index}>
-            <div className="w-16 h-16 md:w-20 md:h-20 py-4 md:py-5 border-[1px] border-none flex justify-center items-center opacity-40 group-disabled:opacity-100">
-              <Image
-                className="w-full h-max border-none"
-                src={image}
-                width={120}
-              />
-            </div>
-          </Slider.Dot>
-        </li>
-      ))}
-    </ul>
-  );
-}
-
+// Botões ajustados
 function Buttons() {
   return (
     <>
-      <div className="flex items-center justify-center z-10 absolute left-2 md:left-0 top-[50%] transform -translate-y-1/2">
-        <Slider.PrevButton className="bg-black/30 rounded-full p-2 md:p-3">
-          <Icon className="text-white" size={24} id="ChevronLeft" strokeWidth={5} />
+      <div className="hidden md:flex items-center justify-center absolute left-4 top-1/2 -translate-y-1/2">
+        <Slider.PrevButton className="bg-white/80 hover:bg-white rounded-full p-2 shadow-lg">
+          <Icon size={24} id="ChevronLeft" strokeWidth={2} />
         </Slider.PrevButton>
       </div>
-      <div className="flex items-center justify-center z-10 absolute right-2 md:right-0 top-[50%] transform -translate-y-1/2">
-        <Slider.NextButton className="bg-black/30 rounded-full p-2 md:p-3">
-          <Icon className="text-white" size={24} id="ChevronRight" strokeWidth={5} />
+      <div className="hidden md:flex items-center justify-center absolute right-4 top-1/2 -translate-y-1/2">
+        <Slider.NextButton className="bg-white/80 hover:bg-white rounded-full p-2 shadow-lg">
+          <Icon size={24} id="ChevronRight" strokeWidth={2} />
         </Slider.NextButton>
       </div>
     </>
