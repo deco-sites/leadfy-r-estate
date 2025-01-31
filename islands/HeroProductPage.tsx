@@ -38,9 +38,9 @@ const HeroProductPage = ({ showPriceText, priceText, storeId, propertiesList = [
 
       {/* Detalhes do Produto */}
       <div className="container mt-8 lg:px-[5%]">
-        <h2 className="text-[32px] font-extrabold text-privia-passion">{property?.title}</h2>
+        <h2 className="text-[24px] md:text-[32px] font-extrabold text-privia-passion">{property?.title}</h2>
         {showPriceText && <span className="w-[150px] text-xs">{priceText}</span>}
-        <p className="text-2xl mt-2 text-[#787878] font-extrabold">{property?.price}</p>
+        <p className="text-xl md:text-2xl mt-2 text-[#787878] font-extrabold">{property?.price}</p>
       </div>
 
       <div className="container flex flex-col md:flex-row gap-4 w-full mt-4 lg:px-[5%]">
@@ -72,7 +72,7 @@ function GalleryProductPage({ images }: { images: string[] }) {
           >
             <ZoomImage>
               <img
-                className="w-full h-auto min-h-[300px] max-h-[90vh] md:max-h-[500px] object-contain border-none"
+                className="w-full h-auto min-h-[300px] max-h-[70vh] object-contain border-none"
                 src={image}
                 alt={`Imagem ${index + 1}`}
               />
@@ -87,26 +87,6 @@ function GalleryProductPage({ images }: { images: string[] }) {
       {/* Controles do Slider */}
       <SliderJS rootId={id} infinite />
     </div>
-  );
-}
-
-function Dots({ images }: { images: string[] }) {
-  return (
-    <ul className="carousel justify-center col-span-full gap-2 z-10 pt-5">
-      {images.map((image, index) => (
-        <li key={index} className="carousel-item">
-          <Slider.Dot index={index}>
-            <div className="w-20 h-20 py-5 border-[1px] border-none flex justify-center items-center opacity-40 group-disabled:opacity-100">
-              <Image
-                className="w-full h-max border-none"
-                src={image}
-                width={120}
-              />
-            </div>
-          </Slider.Dot>
-        </li>
-      ))}
-    </ul>
   );
 }
 
@@ -131,3 +111,4 @@ function Buttons() {
 }
 
 export default HeroProductPage;
+
