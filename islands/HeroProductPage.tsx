@@ -68,8 +68,8 @@ const HeroProductPage = ({showPriceText, priceText, storeId, propertiesList = []
 
 function GalleryProductPage({ images }: { images: string[] }) {
   const id = useId();
-  const width = 650;
-  const height = 450;
+  const width = 1568;
+  const height = 764;
   const aspectRatio = `${width} / ${height}`;
 
   return (
@@ -77,7 +77,7 @@ function GalleryProductPage({ images }: { images: string[] }) {
       id={id}
       class="grid grid-cols-[48px_1fr_48px] sm:grid-cols-[120px_1fr_120px] grid-rows-[1fr_48px_1fr_64px] relative"
     >
-      <Slider class="carousel carousel-center w-full col-span-full row-span-full gap-2 max-w-[650px] overflow-hidden">
+      <Slider class="carousel carousel-center w-full col-span-full row-span-full gap-2 max-w-[1568px] overflow-hidden">
         {images?.map((image, index) => (
           <Slider.Item
             index={index}
@@ -87,7 +87,7 @@ function GalleryProductPage({ images }: { images: string[] }) {
               <img
                 class="w-full h-max"
                 src={image}
-                width={650}
+                width={1568}
                 />
             </ZoomImage>
           </Slider.Item>
