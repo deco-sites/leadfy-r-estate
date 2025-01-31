@@ -1,4 +1,3 @@
-// HeroProductPage.tsx
 import Icon from "../components/ui/Icon.tsx";
 import Slider from "../components/ui/Slider.tsx";
 import SliderJS from "./SliderJS.tsx";
@@ -21,108 +20,96 @@ const HeroProductPage = ({ showPriceText, priceText, storeId, propertiesList = [
   const id = useId();
 
   return (
-    <div className="container mt-12 md:mt-28 mx-auto px-4 py-6 md:py-16 lg:px-0">
-      {/* Header com Logo */}
-      <div className="flex items-center gap-3 mb-8 md:mb-12 lg:px-[5%]">
-        <Image
-          src="/imgs/exp-logo.jpg" // Substituir pelo caminho correto
-          width={80}
-          height={40}
-          alt="eXp Realty"
-          className="w-20 h-auto"
-        />
-        <div className="flex flex-col">
-          <h1 className="text-xl font-bold text-gray-800">TOWNHOMES AT MIRADA</h1>
-          <p className="text-sm text-gray-600">Lagoon-Hampton</p>
-        </div>
+    <div className="container mt-20 md:mt-28 mx-auto px-4 py-8 md:py-16">
+      {/* Cabeçalho */}
+      <div className="mb-8 md:mb-12 text-center">
+        <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-2">EXP</h1>
+        <h2 className="text-xl md:text-3xl text-privia-passion font-semibold">
+          Executive Townhome at Mirada Lagoon - Capri
+        </h2>
       </div>
 
-      <div id={id} className="flex flex-col md:flex-row justify-between md:space-x-4 lg:px-[5%]">
-        {/* Galeria de imagens */}
-        <GalleryProductPage images={property?.images || []} />
+      <div id={id} className="flex flex-col md:flex-row gap-8 lg:px-[5%]">
+        {/* Galeria */}
+        <div className="w-full md:w-2/3">
+          <GalleryProductPage images={property?.images || []} />
+        </div>
 
-        {/* Formulário desktop */}
-        <div className="hidden md:block md:w-1/3 lg:pl-8">
-          <div className="sticky top-24">
-            <h2 className="text-2xl font-bold mb-6">Executive Townhome at Mirada Lagoon - Capri</h2>
+        {/* Formulário */}
+        <div className="w-full md:w-1/3">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-bold mb-6">Get in Touch</h3>
             <FormProductPage storeId={storeId} />
           </div>
         </div>
       </div>
 
-      {/* Detalhes do Produto Mobile */}
-      <div className="md:hidden container mt-6">
-        <h2 className="text-2xl font-bold text-privia-passion mb-4">
-          Executive Townhome at Mirada Lagoon - Capri
-        </h2>
-        {showPriceText && (
-          <span className="block text-sm text-gray-600 mb-2">{priceText}</span>
-        )}
-        <p className="text-xl text-[#787878] font-bold">{property?.price}</p>
-        
-        <div className="mt-6 w-full">
-          <FormProductPage storeId={storeId} />
+      {/* Detalhes */}
+      <div className="mt-8 md:mt-12 lg:px-[5%]">
+        <div className="bg-gray-50 p-6 rounded-lg">
+          <h3 className="text-2xl font-bold text-privia-passion mb-4">TOWNHOMES AT MIRADA</h3>
+          <p className="text-lg text-gray-600 mb-4">Lagoon-Hampton | Ready</p>
+          
+          <div className="flex flex-wrap gap-4 text-sm md:text-base">
+            <div className="bg-white px-4 py-2 rounded-md shadow-sm">
+              {property?.rooms} Bedrooms
+            </div>
+            <div className="bg-white px-4 py-2 rounded-md shadow-sm">
+              {property?.bathrooms} Full Baths
+            </div>
+            <div className="bg-white px-4 py-2 rounded-md shadow-sm">
+              {property?.areaSize} Ft²
+            </div>
+          </div>
         </div>
-      </div>
-
-      {/* Detalhes do Produto Desktop */}
-      <div className="hidden md:block container mt-8 lg:px-[5%]">
-        <h2 className="text-[32px] font-extrabold text-privia-passion">{property?.title}</h2>
-        {showPriceText && (
-          <span className="block mt-2 text-sm">{priceText}</span>
-        )}
-        <p className="text-2xl mt-2 text-[#787878] font-extrabold">{property?.price}</p>
-      </div>
-
-      {/* Especificações */}
-      <div className="container flex flex-col md:flex-row gap-4 w-full mt-6 lg:px-[5%]">
-        <ul className="flex flex-wrap items-center gap-3 text-sm md:text-xs text-[#787878]">
-          <li className="bg-gray-100 px-3 py-1 rounded">{property?.rooms} Bedrooms</li>
-          <li className="bg-gray-100 px-3 py-1 rounded">{property?.bathrooms} Full Baths</li>
-          <li className="bg-gray-100 px-3 py-1 rounded">{property?.areaSize} Ft²</li>
-          {property?.label && (
-            <li className="bg-privia-prestige text-privia-passion py-1 px-3 rounded">
-              {property?.label}
-            </li>
-          )}
-        </ul>
       </div>
     </div>
   );
 };
 
-// GalleryProductPage.tsx
 function GalleryProductPage({ images }: { images: string[] }) {
   const id = useId();
 
   return (
-    <div id={id} className="w-full relative">
-      <Slider className="carousel carousel-center w-full overflow-hidden rounded-xl">
+    <div id={id} className="relative group">
+      <Slider className="carousel carousel-center gap-6 w-full overflow-x-auto snap-x md:snap-none">
         {images.map((image, index) => (
           <Slider.Item
             key={index}
             index={index}
-            className="carousel-item relative w-full"
+            className="carousel-item w-full snap-start"
           >
-            <ZoomImage>
-              <div className="aspect-video w-full">
+            <div className="relative aspect-video w-full">
+              <ZoomImage>
                 <img
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover rounded-xl"
                   src={image}
-                  alt={`Imagem ${index + 1}`}
-                  loading={index === 0 ? "eager" : "lazy"}
-                  decoding={index === 0 ? "auto" : "async"}
+                  alt={`Property view ${index + 1}`}
+                  loading="lazy"
+                  decoding="async"
                 />
-              </div>
-            </ZoomImage>
+              </ZoomImage>
+            </div>
           </Slider.Item>
         ))}
       </Slider>
 
+      {/* Controles */}
       {images.length > 1 && (
         <>
-          <Buttons />
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+          <div className="absolute left-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+            <Slider.PrevButton className="btn btn-circle bg-white/90 hover:bg-white">
+              <Icon size={24} id="ChevronLeft" />
+            </Slider.PrevButton>
+          </div>
+          
+          <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+            <Slider.NextButton className="btn btn-circle bg-white/90 hover:bg-white">
+              <Icon size={24} id="ChevronRight" />
+            </Slider.NextButton>
+          </div>
+
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
             {images.map((_, index) => (
               <Slider.Dot
                 index={index}
@@ -135,24 +122,6 @@ function GalleryProductPage({ images }: { images: string[] }) {
 
       <SliderJS rootId={id} infinite />
     </div>
-  );
-}
-
-// Botões ajustados
-function Buttons() {
-  return (
-    <>
-      <div className="hidden md:flex items-center justify-center absolute left-4 top-1/2 -translate-y-1/2">
-        <Slider.PrevButton className="bg-white/80 hover:bg-white rounded-full p-2 shadow-lg">
-          <Icon size={24} id="ChevronLeft" strokeWidth={2} />
-        </Slider.PrevButton>
-      </div>
-      <div className="hidden md:flex items-center justify-center absolute right-4 top-1/2 -translate-y-1/2">
-        <Slider.NextButton className="bg-white/80 hover:bg-white rounded-full p-2 shadow-lg">
-          <Icon size={24} id="ChevronRight" strokeWidth={2} />
-        </Slider.NextButton>
-      </div>
-    </>
   );
 }
 
